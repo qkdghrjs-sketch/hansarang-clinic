@@ -135,8 +135,8 @@ export default function HoursMapSection() {
         <div className="md:hidden text-center text-[12px] text-[#82aabf] mt-10 mb-2">← 좌우로 스크롤하세요 →</div>
         <div
           className="mt-2 md:mt-10 rounded-[20px] overflow-x-auto bg-white"
-          style={{ WebkitOverflowScrolling: "touch" as const }}
           style={{
+            WebkitOverflowScrolling: "touch" as const,
             border: "1px solid #dceef8",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(30px)",
@@ -211,8 +211,8 @@ export default function HoursMapSection() {
         <div className="md:hidden text-center text-[12px] text-[#82aabf] mt-6 mb-2">← 좌우로 스크롤하세요 →</div>
         <div
           className="mt-2 md:mt-6 overflow-x-auto"
-          style={{ WebkitOverflowScrolling: "touch" as const }}
           style={{
+            WebkitOverflowScrolling: "touch" as const,
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(30px)",
             transition: "opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s",
