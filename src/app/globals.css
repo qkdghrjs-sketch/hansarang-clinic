@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-sky: #38b2f0;
+  --color-sky-deep: #1a9de0;
+  --color-sky-light: #e0f4fd;
+  --color-sky-pale: #f0f9ff;
+  --color-sky-mid: #7dd3f8;
+  --color-off-white: #f8fcff;
+  --color-gray-100: #dceef8;
+  --color-gray-300: #9dc4dc;
+  --color-gray-700: #2d5a72;
+  --color-gray-900: #0f2a3a;
+  --color-text: #1a3a4a;
+  --color-text-mid: #4a7a90;
+  --color-text-light: #82aabf;
+  --color-teal: #0ea5aa;
+  --color-teal-light: #e0f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes progressBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+.animate-hero-fade-up {
+  animation: heroFadeUp 0.8s ease both;
+}
+.animate-hero-fade-up-1 {
+  animation: heroFadeUp 0.8s 0.1s ease both;
+}
+.animate-hero-fade-up-2 {
+  animation: heroFadeUp 0.8s 0.2s ease both;
+}
+.animate-hero-fade-up-3 {
+  animation: heroFadeUp 0.8s 0.3s ease both;
+}
+
+.animate-blink {
+  animation: blink 2s infinite;
+}
+
+.animate-progress-bar {
+  animation: progressBar 4.5s linear forwards;
+}
+
+/* ━━━ Scrollbar hide utility ━━━ */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ━━━ Award Section ━━━ */
+@keyframes award-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes award-underline-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ━━━ Endoscopy Section ━━━ */
+@keyframes endo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
