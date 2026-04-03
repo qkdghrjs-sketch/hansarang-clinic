@@ -84,7 +84,7 @@ export default function CautionPage() {
 
       {/* ━━━ S1: 예약 안내 2카드 ━━━ */}
       <section className="bg-white" ref={s1.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { title: "예약 후 방문", html: <>검진기관 사정 (예약 집중 등)에 따라 예약이 조기에 마감될 수 있으니 <strong style={BD}>사전 확인 및 예약 후 검진하시기 바랍니다.</strong></> },
@@ -112,7 +112,7 @@ export default function CautionPage() {
 
       {/* ━━━ S2: 검진 전날 ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <h2 style={{ ...titleStyle, fontSize: "clamp(24px,3vw,34px)" }}>건강검진 전날</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {BEFORE.map((c, i) => <StepCard key={i} {...c} visible={s2.v} delay={i * 0.1} />)}
@@ -122,7 +122,7 @@ export default function CautionPage() {
 
       {/* ━━━ S3: 검진 당일 ━━━ */}
       <section className="bg-white" ref={s3.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <h2 style={{ ...titleStyle, fontSize: "clamp(24px,3vw,34px)" }}>건강검진 당일</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {DAY_OF.map((c, i) => <StepCard key={i} {...c} visible={s3.v} delay={i * 0.1} />)}
@@ -132,7 +132,7 @@ export default function CautionPage() {
 
       {/* ━━━ S4: 요약 배너 ━━━ */}
       <section ref={s4.ref}>
-        <div style={{ background: "linear-gradient(135deg, #0a1628, #0f2a3a)", padding: "60px 48px" }}>
+        <div style={{ background: "linear-gradient(135deg, #0a1628, #0f2a3a)", padding: "48px 24px" }}>
           <div className="flex flex-wrap justify-center" style={{ gap: 0 }}>
             {SUMMARY.map((s, i) => (
               <div key={i} className="contents">
@@ -157,11 +157,11 @@ export default function CautionPage() {
 
       {/* ━━━ S5: CTA ━━━ */}
       <section ref={s5.ref}>
-        <div className="text-center" style={{ background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "72px 48px", opacity: s5.v ? 1 : 0, transform: s5.v ? "translateY(0)" : "translateY(30px)", transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s" }}>
+        <div className="text-center" style={{ background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "56px 24px", opacity: s5.v ? 1 : 0, transform: s5.v ? "translateY(0)" : "translateY(30px)", transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s" }}>
           <h3 className="font-bold text-white" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.5vw,32px)", marginBottom: 12 }}>검진 예약 문의</h3>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>궁금하신 점이 있으시면 편하게 연락해 주세요</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:031-912-8720" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>📞 031-912-8720 전화예약</a>
+            <a href="tel:031-917-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>031-917-9008 국가건강검진</a>
             <a href="https://naver.me/FvEgeFyj" target="_blank" rel="noopener noreferrer" className="no-underline transition-all duration-300" style={{ background: "transparent", color: "white", border: "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 600 }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = "white"; e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.5)"; e.currentTarget.style.background = "transparent"; }}

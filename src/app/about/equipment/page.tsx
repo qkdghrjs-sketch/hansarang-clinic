@@ -22,17 +22,15 @@ function useReveal() {
 }
 
 /* ━━━ Data ━━━ */
-const TABS = ["전체", "초음파·영상", "내시경", "검사장비"];
+const TABS = ["전체", "내시경", "초음파·영상", "검사장비"];
 
 const EQUIPMENT = [
-  { id: 1, category: "초음파·영상", name: "LOGIQ P9", desc: "초음파 장비", image: "https://gehealthcare-ultrasound.com/media/ultrasound/Products/LOGIQ/LOGIQ_P9_XDclear/Webseite-Highlight.png" },
-  { id: 2, category: "초음파·영상", name: "Javix DR", desc: "Digital Radiography System", image: "https://images.allengers.net/product/2025/09/ceiling-free-digital-radiography-system-17567869521918.jpg" },
-  { id: 3, category: "초음파·영상", name: "mammo", desc: "Mammography", image: "https://m.kukinews.com/data/kuk/image/2020/10/23/kuk202010230324.jpg" },
-  { id: 4, category: "초음파·영상", name: "골밀도 장비", desc: "골밀도 장비", image: "https://www.dkms.co.kr/images/big_stratos.png" },
-  { id: 5, category: "내시경", name: "CV-260SL", desc: "내시경 장비 (HDTV video system)", image: "https://www.medi114.co.kr/data/medimall/1659429963/thumb-3698857746_AxRzkd5f_9690957a00466e33ac85e7faf7226894349c68c9_780x461.png" },
-  { id: 6, category: "내시경", name: "EVIS LUCERA", desc: "내시경 장비 (Advancing visualization)", image: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/31a05bf07525d.png" },
-  { id: 7, category: "내시경", name: "ELITE", desc: "내시경 장비", image: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/6043d7f093cc1.jpeg" },
-  { id: 8, category: "검사장비", name: "Hitachi 7100", desc: "자동생화학분석기", image: "https://www.hitachi-hightech.com/kr/ko/media/ana-f7100_main_jpg_tcm40-28113.jpg" },
+  { id: 1, category: "내시경", name: "OLYMPUS CV-290", desc: "현존 최고 사양 내시경 시스템 (Full HD + NBI)", image: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png" },
+  { id: 2, category: "초음파·영상", name: "LOGIQ P9", desc: "초음파 장비", image: "https://gehealthcare-ultrasound.com/media/ultrasound/Products/LOGIQ/LOGIQ_P9_XDclear/Webseite-Highlight.png" },
+  { id: 3, category: "초음파·영상", name: "Javix DR", desc: "Digital Radiography System", image: "https://images.allengers.net/product/2025/09/ceiling-free-digital-radiography-system-17567869521918.jpg" },
+  { id: 4, category: "초음파·영상", name: "mammo", desc: "Mammography", image: "https://m.kukinews.com/data/kuk/image/2020/10/23/kuk202010230324.jpg" },
+  { id: 5, category: "초음파·영상", name: "골밀도 장비", desc: "골밀도 장비", image: "https://www.dkms.co.kr/images/big_stratos.png" },
+  { id: 6, category: "검사장비", name: "Hitachi 7100", desc: "자동생화학분석기", image: "https://www.hitachi-hightech.com/kr/ko/media/ana-f7100_main_jpg_tcm40-28113.jpg" },
 ];
 
 const STATS = [
@@ -63,7 +61,7 @@ export default function EquipmentPage() {
 
       {/* ━━━ Header + Tabs ━━━ */}
       <section className="bg-white" ref={s1.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "60px 48px 40px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 40 }}>
           <div
             className="text-center"
             style={{
@@ -86,7 +84,7 @@ export default function EquipmentPage() {
           </div>
         </div>
 
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "0 48px 40px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 0, paddingBottom: 40 }}>
           <div
             className="flex flex-wrap justify-center gap-2"
             style={{
@@ -120,10 +118,10 @@ export default function EquipmentPage() {
 
       {/* ━━━ Equipment Grid ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "40px 48px 100px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 40, paddingBottom: 100 }}>
           <div
             key={fadeKey}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             style={{ animation: "equipFadeIn 0.3s ease" }}
           >
             {filtered.map((eq, i) => (
@@ -196,7 +194,7 @@ export default function EquipmentPage() {
           className="text-center"
           style={{
             background: "linear-gradient(135deg, #0a1628, #0f2a3a)",
-            padding: "60px 48px",
+            padding: "48px 24px",
             opacity: s3.v ? 1 : 0,
             transform: s3.v ? "translateY(0)" : "translateY(30px)",
             transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",

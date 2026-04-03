@@ -17,7 +17,7 @@ export default function SubPageBanner({ category, title, breadcrumb }: SubPageBa
 
   return (
     <div
-      className="relative overflow-hidden flex items-end h-[160px] md:h-[220px] pt-[60px] md:pt-[76px]"
+      className="relative overflow-hidden flex items-end h-[200px] md:h-[260px] pt-[60px] md:pt-[76px]"
       style={{
         background: "linear-gradient(135deg, #0a1628, #0f2a3a, #1a3a4a)",
       }}

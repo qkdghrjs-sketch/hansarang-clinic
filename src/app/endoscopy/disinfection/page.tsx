@@ -26,18 +26,18 @@ function useReveal() {
 
 /* ━━━ Data ━━━ */
 const STEPS = [
-  <>철저한 소독을 위해서 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>최고성능의 올림푸스 내시경 전용세척기 2대를 보유</strong>해 사용하고 있습니다.</>,
+  <>철저한 소독을 위해서 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>최고성능의 올림푸스 내시경 전용세척기 3대와 감염통 1대를 보유</strong>해 사용하고 있습니다.</>,
   <>용종절제와 조직검사 등에 사용하는 내시경 부속장비의 소독을 위해 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>전용 EO가스 소독기를 보유</strong>하고 있습니다.</>,
   <>내시경은 인체로 직접 삽입되므로 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>청결이 매우 중요</strong>합니다. 저희 한사랑속편한내과는 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>최신형 내시경을 보유하고 있으며 한분 한분 마다 새로 소독한 내시경으로 검사</strong>를 하고 있습니다.</>,
-  <>세척 소독제로는 살균효과가 매우 뛰어나며 현재 대학병원 급에서 사용중이며 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>인체에 무해한 내시경 전용 소독제인 고가의 Cidex 소독액을 사용</strong>하고 있습니다.</>,
+  <>세척 소독제로는 살균효과가 매우 뛰어나며 현재 대학병원 급에서 사용중이며 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>인체에 무해한 내시경 전용 소독제인 페라스텔 과초산 제제를 사용</strong>하고 있습니다.</>,
   <>위내시경검사에 필수적인 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>마우스피스를 일회용으로 사용</strong>하여 환자 여러분에게 내시경 검사로 인한 어떠한 감염도 일어나지 않도록 하고 있습니다.</>,
 ];
 
 const PRINCIPLES = [
   { icon: "🧼", title: "1회 1소독 원칙", desc: "매 검사 후 새로 소독한 내시경 사용" },
-  { icon: "🔬", title: "올림푸스 전용 세척기", desc: "최고성능 내시경 전용 세척기 2대 보유" },
+  { icon: "🔬", title: "올림푸스 전용 세척기", desc: "최고성능 내시경 전용 세척기 3대 보유" },
   { icon: "💨", title: "EO가스 멸균", desc: "부속기구 전용 EO가스 소독기 보유" },
-  { icon: "🪣", title: "Cidex 소독액", desc: "대학병원급 인체 무해 전용 소독제 사용" },
+  { icon: "🪣", title: "페라스텔 과초산", desc: "대학병원급 인체 무해 전용 소독제 사용" },
 ];
 
 /* ━━━ Component ━━━ */
@@ -66,7 +66,7 @@ export default function DisinfectionPage() {
         }}
       >
         <Image
-          src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e72dc805bf29e.png"
+          src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b7d60643909e8.png"
           alt="내시경 소독"
           fill
           unoptimized
@@ -103,7 +103,7 @@ export default function DisinfectionPage() {
 
       {/* ━━━ S2: 소독 5단계 번호 카드 ━━━ */}
       <section className="bg-white" ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <h2
             className="text-center font-bold"
             style={{
@@ -205,7 +205,7 @@ export default function DisinfectionPage() {
             >
               <div className="relative w-full overflow-hidden" style={{ height: 200, borderRadius: 12 }}>
                 <Image
-                  src="https://cdn.imweb.me/thumbnail/20240614/5c0d41d1c7e70.jpg"
+                  src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b7d60643909e8.png"
                   alt="내시경 소독실"
                   fill
                   unoptimized
@@ -222,7 +222,7 @@ export default function DisinfectionPage() {
 
       {/* ━━━ S3: 소독 사진 2세트 ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s3.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <h2
             className="text-center font-bold"
             style={{
@@ -235,65 +235,73 @@ export default function DisinfectionPage() {
             소독 과정
           </h2>
 
-          <div className="flex flex-col gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              {
-                step: "소독 STEP 01",
-                caption: "내시경 자동 세척기를 이용한 소독 과정",
-                img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/d6c55128d7c5d.png",
-              },
-              {
-                step: "소독 STEP 02",
-                caption: "EO가스를 이용한 내시경 부속기구 멸균과정",
-                img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5b1ea004f7d71.png",
-              },
-            ].map((set, si) => (
+              { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/79a11b52c90c4.jpeg", title: "사용 후 내시경 수거", desc: "검사 완료 후 내시경을 즉시 수거하여 소독 준비를 시작합니다." },
+              { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/7763a2acd25a3.png", title: "1차 손세척", desc: "전용 세척액으로 내시경 외부와 채널 내부를 꼼꼼히 손세척합니다." },
+              { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/68d1babf56bb2.jpeg", title: "자동세척기 투입", desc: "올림푸스 전용 자동세척기에 투입하여 고수준 소독을 진행합니다." },
+              { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/39927380e94ed.png", title: "페라스텔 소독", desc: "페라스텔 과초산 제제로 내시경 전체를 완벽하게 살균 소독합니다." },
+              { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b72dfec515c7b.png", title: "건조 및 보관", desc: "소독 완료된 내시경을 건조 후 청결한 전용 보관함에 보관합니다." },
+              { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/ad7e84d5722cb.jpeg", title: "소독 완료 확인", desc: "소독 이력을 기록하고 다음 검사 전까지 위생 상태를 관리합니다." },
+            ].map((step, i) => (
               <div
-                key={si}
+                key={i}
+                className="group bg-white overflow-hidden"
                 style={{
-                  background: "white",
                   border: "1px solid #dceef8",
                   borderRadius: 20,
-                  overflow: "hidden",
-                  padding: 32,
                   opacity: s3.v ? 1 : 0,
                   transform: s3.v ? "translateY(0)" : "translateY(30px)",
-                  transition: `opacity 0.5s ease ${si * 0.1}s, transform 0.5s ease ${si * 0.1}s`,
+                  transition: `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s, box-shadow 0.3s ease, border-color 0.3s ease`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(56,178,240,0.14)";
+                  e.currentTarget.style.borderColor = "rgba(56,178,240,0.3)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "none";
+                  e.currentTarget.style.borderColor = "#dceef8";
                 }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                  {[0, 1, 2].map((pi) => (
-                    <div key={pi} className="relative overflow-hidden" style={{ height: 200, borderRadius: 12 }}>
-                      <Image
-                        src={set.img}
-                        alt={`${set.step} - ${pi + 1}`}
-                        fill
-                        unoptimized
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="text-center" style={{ marginTop: 20 }}>
-                  <div className="flex items-center justify-center gap-2" style={{ marginBottom: 8 }}>
-                    <span style={{ width: 40, height: 1, background: "rgba(56,178,240,0.3)" }} />
-                    <span
-                      style={{
-                        fontFamily: "var(--font-outfit)",
-                        fontSize: 11,
-                        color: "#1a9de0",
-                        letterSpacing: 1.5,
-                        fontWeight: 700,
-                      }}
-                    >
-                      {set.step}
+                {/* 사진 */}
+                <div className="relative overflow-hidden" style={{ height: 200 }}>
+                  <Image
+                    src={step.src}
+                    alt={step.title}
+                    fill
+                    unoptimized
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                  />
+                  {/* 스텝 번호 뱃지 */}
+                  <div
+                    className="absolute top-4 left-4 z-10 flex items-center gap-2"
+                    style={{
+                      background: "linear-gradient(135deg, #1a9de0, #38b2f0)",
+                      borderRadius: 10,
+                      padding: "6px 14px",
+                      boxShadow: "0 4px 12px rgba(26,157,224,0.4)",
+                    }}
+                  >
+                    <span style={{ fontFamily: "var(--font-outfit)", fontSize: 13, fontWeight: 800, color: "white" }}>
+                      STEP {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span style={{ width: 40, height: 1, background: "rgba(56,178,240,0.3)" }} />
                   </div>
-                  <div style={{ fontSize: 14, color: "#4a7a90", fontWeight: 500 }}>
-                    {set.caption}
-                  </div>
+                  {/* 하단 그라데이션 */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/3 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(10,22,40,0.3), transparent)" }} />
                 </div>
+
+                {/* 텍스트 */}
+                <div style={{ padding: "20px 24px 24px" }}>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: "#0f2a3a", marginBottom: 8 }}>
+                    {step.title}
+                  </div>
+                  <p style={{ fontSize: 13.5, color: "#4a7a90", lineHeight: 1.7, wordBreak: "keep-all" }}>
+                    {step.desc}
+                  </p>
+                </div>
+
+                {/* 하단 진행 바 */}
+                <div style={{ height: 3, background: `linear-gradient(to right, #1a9de0 ${((i + 1) / 6) * 100}%, #e0f4fd ${((i + 1) / 6) * 100}%)` }} />
               </div>
             ))}
           </div>
@@ -305,7 +313,7 @@ export default function DisinfectionPage() {
         ref={s4.ref}
         style={{
           background: "linear-gradient(135deg, #0a1628, #0f2a3a)",
-          padding: "64px 48px",
+          padding: "48px 24px",
           textAlign: "center",
         }}
       >
@@ -354,7 +362,7 @@ export default function DisinfectionPage() {
         ref={s5.ref}
         style={{
           background: "linear-gradient(135deg, #1a9de0, #0d8fcc)",
-          padding: "72px 48px",
+          padding: "56px 24px",
           textAlign: "center",
         }}
       >

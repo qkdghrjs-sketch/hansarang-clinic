@@ -6,14 +6,14 @@ import Image from "next/image";
 /* ━━━ Data ━━━ */
 const cards = [
   {
-    img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5b1ea004f7d71.png",
+    img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/41300a7a3791f.png",
     tag: "SPACE",
     tagColor: "#1a9de0",
     title: "편안하고 안락한 공간",
     desc: "개인 VIP룸을 제공하여 안락한 공간에서 편안한 휴식과 최상의 의료서비스를 제공해드립니다.",
   },
   {
-    img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/31a05bf07525d.png",
+    img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/16da0e6f5b95b.jpeg",
     tag: "SPECIALIST",
     tagColor: "#0ea5aa",
     title: "특화된 전문의",
@@ -27,7 +27,7 @@ const cards = [
     desc: "대학병원급 내시경장비, 초음파, 임상병리장비를 도입하여 신속하고 정확한 진단이 가능합니다.",
   },
   {
-    img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/751d7204baa45.png",
+    img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5a0f145b1ac87.png",
     tag: "PROGRAM",
     tagColor: "#f59e0b",
     title: "특화 건강검진 프로그램",
@@ -132,7 +132,7 @@ export default function CheckupCenterSection() {
         className="relative overflow-hidden"
         style={{
           background: "linear-gradient(135deg, #0a1628 0%, #0f2a3a 50%, #1a3a4a 100%)",
-          padding: "80px 24px 120px",
+          padding: "60px 20px 80px",
         }}
       >
         {/* BG glows */}
@@ -254,7 +254,7 @@ export default function CheckupCenterSection() {
               </div>
 
               {/* Text */}
-              <div className="flex-1 flex flex-col" style={{ padding: "28px 32px 32px" }}>
+              <div className="flex-1 flex flex-col" style={{ padding: "20px 20px 24px" }}>
                 <div
                   className="inline-block text-[11px] font-bold tracking-[1.5px] uppercase mb-[10px]"
                   style={{ fontFamily: "var(--font-outfit)", color: card.tagColor }}
@@ -288,7 +288,7 @@ export default function CheckupCenterSection() {
           style={{
             background: "linear-gradient(135deg, #1a9de0, #0d8fcc)",
             borderRadius: 20,
-            padding: "40px 48px",
+            padding: "32px 20px",
             marginTop: 40,
             gap: 0,
             opacity: cardsVisible ? 1 : 0,
@@ -301,9 +301,9 @@ export default function CheckupCenterSection() {
               {i > 0 && (
                 <div className="hidden md:block flex-shrink-0" style={{ width: 1, height: 48, background: "rgba(255,255,255,0.25)" }} />
               )}
-              <div className="flex flex-col items-center justify-center text-center" style={{ flex: 1, minWidth: 160 }}>
+              <div className="flex flex-col items-center justify-center text-center" style={{ flex: 1, minWidth: 120 }}>
                 <div
-                  className="text-[36px] font-extrabold text-white leading-none tracking-tight"
+                  className="text-[24px] md:text-[36px] font-extrabold text-white leading-none tracking-tight"
                   style={{ fontFamily: "var(--font-outfit)" }}
                 >
                   {s.value}

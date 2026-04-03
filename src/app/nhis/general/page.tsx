@@ -91,7 +91,7 @@ export default function NhisGeneralPage() {
 
       {/* ━━━ S2: Process steps ━━━ */}
       <section className="bg-white" ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <h2 className="text-center font-bold" style={{
             fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(24px,3vw,34px)", color: "#0f2a3a", marginBottom: 60,
             opacity: s2.v ? 1 : 0, transform: s2.v ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.6s, transform 0.6s",
@@ -147,7 +147,7 @@ export default function NhisGeneralPage() {
 
       {/* ━━━ S3: Detail rows ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s3.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
 
           {/* Row 1 */}
           <DetailRow title="대상자 선정" org="(국민건강보험공단)" visible={s3.v} delay={0}>
@@ -202,7 +202,7 @@ export default function NhisGeneralPage() {
       {/* ━━━ S4: CTA ━━━ */}
       <section ref={s4.ref}>
         <div className="text-center" style={{
-          background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "72px 48px",
+          background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "56px 24px",
           opacity: s4.v ? 1 : 0, transform: s4.v ? "translateY(0)" : "translateY(30px)",
           transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
         }}>
@@ -211,8 +211,8 @@ export default function NhisGeneralPage() {
           </h3>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>지금 바로 한사랑속편한내과에서 편안하게 검진받으세요</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:031-912-8720" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
-              📞 031-912-8720 전화예약
+            <a href="tel:031-917-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
+              031-917-9008 국가건강검진
             </a>
             <a href="https://naver.me/FvEgeFyj" target="_blank" rel="noopener noreferrer" className="no-underline transition-all duration-300" style={{ background: "transparent", color: "white", border: "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 600 }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = "white"; e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}

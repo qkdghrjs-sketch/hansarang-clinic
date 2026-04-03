@@ -70,15 +70,16 @@ const techCards: TechCard[] = [
 
 interface RecordItem {
   target: number;
+  prefix?: string;
   suffix: string;
   label: string;
 }
 
 const records: RecordItem[] = [
-  { target: 154000, suffix: "례", label: "위내시경" },
-  { target: 45000, suffix: "례", label: "대장내시경" },
-  { target: 18830, suffix: "례", label: "대장용종 절제술" },
-  { target: 1054, suffix: "명", label: "암 진단" },
+  { target: 154000, prefix: "+", suffix: "례", label: "위내시경" },
+  { target: 45000, prefix: "+", suffix: "례", label: "대장내시경" },
+  { target: 18830, prefix: "+", suffix: "례", label: "대장용종 절제술" },
+  { target: 1054, prefix: "+", suffix: "명", label: "암 진단" },
 ];
 
 /* ━━━ Count-up hook ━━━ */
@@ -114,7 +115,7 @@ function RecordNumber({ item, started }: { item: RecordItem; started: boolean })
         className="text-[28px] md:text-[34px] font-extrabold leading-none tracking-tight"
         style={{ fontFamily: "var(--font-outfit)", color: "#38b2f0" }}
       >
-        {count.toLocaleString()}
+        {item.prefix && item.prefix}{count.toLocaleString()}
         <span className="text-[16px] font-semibold text-white/60">{item.suffix}</span>
       </div>
       <div className="text-[12px] text-white/50 mt-[6px]">{item.label}</div>
@@ -167,7 +168,7 @@ export default function EndoscopySection() {
     <section
       ref={sectionRef}
       id="endoscopy"
-      className="relative py-[110px] px-6 lg:px-12 overflow-hidden"
+      className="relative py-[60px] md:py-[110px] px-5 md:px-6 lg:px-12 overflow-hidden"
       style={{ background: "#f8fcff" }}
     >
       {/* ── BG decorative glows ── */}
@@ -242,7 +243,7 @@ export default function EndoscopySection() {
             <div className="relative rounded-[20px] overflow-hidden group cursor-pointer">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="https://cdn.imweb.me/thumbnail/20240614/5c0d41d1c7e70.jpg"
+                  src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png"
                   alt="OLYMPUS CV-290 내시경 장비"
                   fill
                   unoptimized
@@ -280,7 +281,7 @@ export default function EndoscopySection() {
             </div>
 
             {/* Equipment stats: 3 items horizontal */}
-            <div className="grid grid-cols-3 gap-3 mt-4">
+            <div className="grid grid-cols-3 gap-2 mt-4">
               {[
                 { label: "내시경 본체", val: "3대", icon: "🔬" },
                 { label: "위내시경", val: "7대", icon: "🩺" },

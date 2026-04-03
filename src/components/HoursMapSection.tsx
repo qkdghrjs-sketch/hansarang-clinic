@@ -21,7 +21,7 @@ const DOCTORS = [
   { name: "최영균", am: [0, 0, 1, 1, 0, 0], pm: [0, 1, 0, 0, 1, 0] },
   { name: "김수지", am: [0, 0, 1, 0, 1, 0], pm: [0, 1, 1, 0, 0, 0] },
   { name: "현보라", am: [1, 0, 0, 1, 0, 0], pm: [1, 0, 1, 1, 1, 0] },
-  { name: "박상윤", am: [0, 1, 0, 0, 1, 1], pm: [1, 0, 0, 0, 1, 0] },
+  { name: "박상운", am: [0, 1, 0, 0, 1, 1], pm: [1, 0, 0, 0, 1, 0] },
 ];
 
 const DAYS_SHORT = ["월", "화", "수", "목", "금", "토"];
@@ -332,24 +332,33 @@ export default function HoursMapSection() {
 
           {/* Info cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            {/* 대표전화 */}
-            <a
-              href="tel:031-912-8720"
-              className="flex items-center gap-[14px] no-underline bg-white transition-all duration-200 hover:-translate-y-[2px]"
+            {/* 전화번호 */}
+            <div
+              className="flex flex-col gap-3 bg-white"
               style={{ border: "1.5px solid #dceef8", borderRadius: 16, padding: "20px 24px" }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#38b2f0"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(56,178,240,0.12)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#dceef8"; e.currentTarget.style.boxShadow = "none"; }}
             >
-              <div className="flex items-center justify-center flex-shrink-0" style={{ width: 46, height: 46, background: "#f0f9ff", borderRadius: 12 }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#1a9de0">
-                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z" />
-                </svg>
+              <a href="tel:031-912-8720" className="flex items-center gap-[14px] no-underline">
+                <div className="flex items-center justify-center flex-shrink-0" style={{ width: 46, height: 46, background: "#f0f9ff", borderRadius: 12 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#1a9de0">
+                    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z" />
+                  </svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: 11, color: "#82aabf", marginBottom: 3 }}>대표전화</div>
+                  <div style={{ fontSize: 17, fontWeight: 800, color: "#0f2a3a", fontFamily: "var(--font-outfit)", letterSpacing: "-0.3px" }}>031-912-8720</div>
+                </div>
+              </a>
+              <div style={{ borderTop: "1px solid #f0f7fc", paddingTop: 10, display: "flex", flexDirection: "column", gap: 6 }}>
+                <a href="tel:031-917-9008" className="flex items-center justify-between no-underline" style={{ fontSize: 13 }}>
+                  <span style={{ color: "#4a7a90" }}>국가건강검진</span>
+                  <span style={{ fontFamily: "var(--font-outfit)", fontWeight: 700, color: "#0f2a3a" }}>031-917-9008</span>
+                </a>
+                <a href="tel:031-916-8720" className="flex items-center justify-between no-underline" style={{ fontSize: 13 }}>
+                  <span style={{ color: "#4a7a90" }}>종합검진실</span>
+                  <span style={{ fontFamily: "var(--font-outfit)", fontWeight: 700, color: "#0f2a3a" }}>031-916-8720</span>
+                </a>
               </div>
-              <div>
-                <div style={{ fontSize: 11, color: "#82aabf", marginBottom: 3 }}>대표전화</div>
-                <div style={{ fontSize: 17, fontWeight: 800, color: "#0f2a3a", fontFamily: "var(--font-outfit)", letterSpacing: "-0.3px" }}>031-912-8720</div>
-              </div>
-            </a>
+            </div>
 
             {/* 주차안내 */}
             <div
@@ -363,7 +372,8 @@ export default function HoursMapSection() {
               </div>
               <div>
                 <div style={{ fontSize: 11, color: "#82aabf", marginBottom: 3 }}>주차안내</div>
-                <div style={{ fontSize: 17, fontWeight: 800, color: "#0f2a3a" }}>주차 가능</div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: "#0f2a3a" }}>건물 뒷편 주차장</div>
+                <div style={{ fontSize: 12, color: "#4a7a90", marginTop: 2, lineHeight: 1.5 }}>주차장 협소 시 노상주차장 이용<br />(주차권 1시간 지원 · 주차권 지참 필수)</div>
               </div>
             </div>
 

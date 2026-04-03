@@ -24,17 +24,34 @@ function useRevealRef() {
   return { ref, visible };
 }
 
-const stats = [
-  { value: "1994년", label: "개원" },
-  { value: "30년+", label: "진료 경험" },
-  { value: "8인", label: "전문의" },
-  { value: "30개+", label: "속편한내과 네트워크" },
+const strengths = [
+  {
+    icon: "🏥",
+    title: "1994년 개원",
+    desc: "30년 이상의 진료 경험과 신뢰를 바탕으로 지역 주민의 건강을 지켜왔습니다.",
+  },
+  {
+    icon: "👨‍⚕️",
+    title: "8인 전문의 협진",
+    desc: "대학병원 임상교수 출신의 풍부한 경험을 갖춘 전문의료진이 함께합니다.",
+  },
+  {
+    icon: "🔬",
+    title: "대학병원급 장비",
+    desc: "최신 의료장비를 지속적으로 도입하여 정확하고 편안한 진료를 제공합니다.",
+  },
+  {
+    icon: "🤝",
+    title: "전국 30여개 네트워크",
+    desc: "속편한내과 네트워크를 통한 정기 세미나와 교육으로 진료 수준을 높이고 있습니다.",
+  },
 ];
 
 export default function GreetingPage() {
   const s1 = useRevealRef();
   const s2 = useRevealRef();
   const s3 = useRevealRef();
+  const s4 = useRevealRef();
 
   return (
     <>
@@ -45,54 +62,63 @@ export default function GreetingPage() {
         breadcrumb={["홈", "본원소개", "인사말"]}
       />
 
-      {/* ━━━ Section 1: Main Greeting ━━━ */}
+      {/* ━━━ S1: 대표 인사 ━━━ */}
       <section className="bg-white" ref={s1.ref}>
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12" style={{ padding: "120px 48px" }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12" style={{ paddingTop: 60, paddingBottom: 80 }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-14 lg:gap-20 items-start">
             {/* Left: Text */}
             <div
               style={{
-                maxWidth: 600,
                 wordBreak: "keep-all",
                 opacity: s1.visible ? 1 : 0,
                 transform: s1.visible ? "translateY(0)" : "translateY(40px)",
                 transition: "opacity 0.6s ease, transform 0.6s ease",
               }}
             >
-              <span
-                className="block select-none"
+              {/* Label */}
+              <div
+                className="inline-flex items-center gap-[10px] mb-8"
                 style={{
-                  fontSize: 120, color: "#38b2f0", opacity: 0.3,
-                  fontFamily: "Georgia, serif", lineHeight: 1, marginBottom: -24,
+                  fontSize: 12, fontWeight: 600, letterSpacing: 2,
+                  color: "#1a9de0", fontFamily: "var(--font-outfit)",
+                  textTransform: "uppercase",
                 }}
               >
-                &ldquo;
-              </span>
+                <span style={{ width: 20, height: 2, background: "#38b2f0", borderRadius: 1 }} />
+                GREETING
+              </div>
+
               <h2
                 className="font-bold"
                 style={{
                   fontFamily: "var(--font-noto-serif-kr)",
-                  fontSize: "clamp(28px, 3vw, 42px)",
+                  fontSize: "clamp(26px, 3vw, 40px)",
                   color: "#0f2a3a",
                   letterSpacing: "-1px",
                   lineHeight: 1.5,
-                  marginBottom: 40,
+                  marginBottom: 32,
                 }}
               >
                 여러분의 건강 지킴이가 되기 위해
                 <br />
-                항상 노력하겠습니다.
+                <span style={{ color: "#1a9de0" }}>항상 노력하겠습니다.</span>
               </h2>
+
               <p
                 className="font-light"
-                style={{
-                  fontSize: 17, color: "#4a7a90",
-                  lineHeight: 2.0, letterSpacing: "-0.1px",
-                }}
+                style={{ fontSize: 16, color: "#4a7a90", lineHeight: 2.0, marginBottom: 28 }}
               >
                 한사랑속편한내과는 내과 질환에 대한 정확한 진단과 질 높은 진료와 치료를 제공한다는 목적하에
-                1994년 한사랑내과로 개원하였으며 2009년 소화기질환 전문 속편한내과가 합병하여
-                한사랑속편한내과 이름으로 오늘에 이르고 있습니다.
+                1994년 한사랑내과로 개원하였으며, 2009년 소화기질환 전문 속편한내과가 합병하여
+                한사랑속편한내과라는 이름으로 오늘에 이르고 있습니다.
+              </p>
+
+              <p
+                className="font-light"
+                style={{ fontSize: 16, color: "#4a7a90", lineHeight: 2.0 }}
+              >
+                고양시 최대 규모 전문내과의원으로서, 내원하시는 모든 분들에게
+                보다 높은 수준의 진료와 서비스를 제공하기 위해 늘 정성을 다하겠습니다.
               </p>
             </div>
 
@@ -108,48 +134,72 @@ export default function GreetingPage() {
                 <Image
                   src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/31a05bf07525d.png"
                   alt="한사랑속편한내과 의료진"
-                  width={640}
-                  height={480}
+                  width={420}
+                  height={520}
                   unoptimized
                   className="w-full object-cover"
-                  style={{ aspectRatio: "4/3" }}
+                  style={{ aspectRatio: "4/5" }}
                 />
-              </div>
-              {/* Floating card */}
-              <div
-                className="inline-flex items-center gap-[14px]"
-                style={{
-                  marginTop: -40, marginLeft: 24, position: "relative", zIndex: 10,
-                  background: "white", borderRadius: 16, padding: "18px 24px",
-                  boxShadow: "0 8px 32px rgba(56,178,240,0.15)", border: "1px solid #dceef8",
-                }}
-              >
-                <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
-                  style={{ background: "#f0f9ff" }}
-                >
-                  🏥
-                </div>
-                <div>
-                  <div style={{ fontSize: 13, color: "#82aabf" }}>1994년 개원</div>
-                  <div style={{ fontSize: 16, fontWeight: 700, color: "#0f2a3a" }}>30년 이상의 신뢰</div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ━━━ Section 2: High-level care ━━━ */}
+      {/* ━━━ S2: 핵심 강점 4카드 ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-12" style={{ padding: "120px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {strengths.map((item, i) => (
+              <div
+                key={item.title}
+                className="group bg-white transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  border: "1.5px solid #dceef8",
+                  borderRadius: 20,
+                  padding: "32px 28px",
+                  opacity: s2.visible ? 1 : 0,
+                  transform: s2.visible ? "translateY(0)" : "translateY(30px)",
+                  transition: `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s, box-shadow 0.3s ease, border-color 0.3s ease`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(56,178,240,0.14)";
+                  e.currentTarget.style.borderColor = "rgba(56,178,240,0.3)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "none";
+                  e.currentTarget.style.borderColor = "#dceef8";
+                }}
+              >
+                <div style={{ fontSize: 32, marginBottom: 16 }}>{item.icon}</div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-noto-serif-kr)",
+                    fontSize: 17, fontWeight: 700, color: "#0f2a3a",
+                    marginBottom: 10,
+                  }}
+                >
+                  {item.title}
+                </div>
+                <p style={{ fontSize: 13.5, color: "#4a7a90", lineHeight: 1.75, fontWeight: 300, wordBreak: "keep-all" }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ S3: 상세 소개 ━━━ */}
+      <section className="bg-white" ref={s3.ref}>
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12" style={{ paddingTop: 80, paddingBottom: 100 }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left: Photo */}
             <div
-              className="group"
+              className="group order-2 lg:order-1"
               style={{
-                opacity: s2.visible ? 1 : 0,
-                transform: s2.visible ? "translateY(0)" : "translateY(40px)",
+                opacity: s3.visible ? 1 : 0,
+                transform: s3.visible ? "translateY(0)" : "translateY(40px)",
                 transition: "opacity 0.6s ease, transform 0.6s ease",
               }}
             >
@@ -166,71 +216,79 @@ export default function GreetingPage() {
               </div>
             </div>
 
-            {/* Right: Text */}
-            <div style={{ wordBreak: "keep-all" }}>
-              <div
+            {/* Right: Text blocks */}
+            <div
+              className="order-1 lg:order-2"
+              style={{
+                wordBreak: "keep-all",
+                opacity: s3.visible ? 1 : 0,
+                transform: s3.visible ? "translateY(0)" : "translateY(40px)",
+                transition: "opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s",
+              }}
+            >
+              <h3
+                className="font-bold"
                 style={{
-                  maxWidth: 600,
-                  opacity: s2.visible ? 1 : 0,
-                  transform: s2.visible ? "translateY(0)" : "translateY(40px)",
-                  transition: "opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s",
+                  fontFamily: "var(--font-noto-serif-kr)",
+                  fontSize: "clamp(24px, 2.8vw, 34px)",
+                  color: "#0f2a3a",
+                  letterSpacing: "-0.8px",
+                  lineHeight: 1.4,
+                  marginBottom: 32,
                 }}
               >
-                <span
-                  className="block select-none"
+                동네병원에서 받는
+                <br />
+                대학병원급 진료
+              </h3>
+
+              {/* Block 1 */}
+              <div style={{ marginBottom: 24 }}>
+                <div
                   style={{
-                    fontSize: 60, color: "#38b2f0", opacity: 0.3,
-                    fontFamily: "Georgia, serif", lineHeight: 1, marginBottom: -12,
+                    fontSize: 14, fontWeight: 700, color: "#1a9de0",
+                    marginBottom: 8, fontFamily: "var(--font-outfit)",
+                    letterSpacing: 0.5,
                   }}
                 >
-                  &ldquo;
-                </span>
-                <h3
-                  className="font-bold mb-5"
-                  style={{
-                    fontFamily: "var(--font-noto-serif-kr)",
-                    fontSize: "clamp(26px, 3vw, 36px)",
-                    color: "#0f2a3a", letterSpacing: "-0.8px",
-                  }}
-                >
-                  높은 수준의 진료와 서비스
-                </h3>
-                <p
-                  className="font-light mb-8"
-                  style={{ fontSize: 17, color: "#4a7a90", lineHeight: 2.0 }}
-                >
-                  한사랑속편한내과는 고양시 최대 규모 전문내과의원으로 여러분의 건강 지킴이가 되기 위해
-                  늘 정성을 다하겠습니다.
+                  전문의료진
+                </div>
+                <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9 }}>
+                  8명의 대학병원 임상교수 출신의 임상경험이 풍부한 전문의료진으로 구성되어 있어
+                  전문적이며 포괄적인 진료가 가능합니다.
                 </p>
               </div>
 
-              {/* Highlight box */}
-              <div
-                style={{
-                  background: "linear-gradient(135deg, #f0f9ff, #e8f4fd)",
-                  border: "1px solid #dceef8",
-                  borderLeft: "4px solid #1a9de0",
-                  borderRadius: "0 16px 16px 0",
-                  padding: "32px 36px",
-                  opacity: s2.visible ? 1 : 0,
-                  transform: s2.visible ? "translateY(0)" : "translateY(40px)",
-                  transition: "opacity 0.6s ease 0.25s, transform 0.6s ease 0.25s",
-                }}
-              >
-                <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 2.0, marginBottom: 20 }}>
-                  한사랑속편한내과는 전국 30여개 속편한내과와 연합하여 정기적인 세미나와 교육을 실시하고
-                  있으며 내원하시는 분들에게 보다 높은 수준의 진료와 서비스를 제공하기 위해 노력하고
-                  있습니다.
-                </p>
-                <div style={{ borderTop: "1px solid #dceef8", marginBottom: 20 }} />
-                <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 2.0, marginBottom: 20 }}>
-                  8명의 대학병원 임상교수 출신의 임상경험이 풍부한 전문의료진으로 구성되어 있어 전문적이며
-                  포괄적인 진료가 가능하며, 최신의 의료장비를 업데이트하는 데 있어 투자를 아끼지 않음으로써
+              {/* Block 2 */}
+              <div style={{ marginBottom: 24 }}>
+                <div
+                  style={{
+                    fontSize: 14, fontWeight: 700, color: "#1a9de0",
+                    marginBottom: 8, fontFamily: "var(--font-outfit)",
+                    letterSpacing: 0.5,
+                  }}
+                >
+                  최신 의료장비
+                </div>
+                <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9 }}>
+                  최신의 의료장비를 업데이트하는 데 투자를 아끼지 않음으로써,
                   편안한 동네병원에서 대학병원급의 진료를 받으실 수 있도록 끊임없이 노력하고 있습니다.
                 </p>
-                <div style={{ borderTop: "1px solid #dceef8", marginBottom: 20 }} />
-                <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 2.0 }}>
-                  또한 전문적인 내과질환 진단 및 치료에 대한 경험을 바탕으로 체계적이고 건강검진 프로그램을
+              </div>
+
+              {/* Block 3 */}
+              <div>
+                <div
+                  style={{
+                    fontSize: 14, fontWeight: 700, color: "#1a9de0",
+                    marginBottom: 8, fontFamily: "var(--font-outfit)",
+                    letterSpacing: 0.5,
+                  }}
+                >
+                  예방 중심 건강검진
+                </div>
+                <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9 }}>
+                  전문적인 내과질환 진단 및 치료에 대한 경험을 바탕으로 체계적인 건강검진 프로그램을
                   실시하여 증상이 발생되기 전에 질병을 조기에 발견하거나 예방하기 위해 힘쓰고 있습니다.
                 </p>
               </div>
@@ -239,45 +297,41 @@ export default function GreetingPage() {
         </div>
       </section>
 
-      {/* ━━━ Section 3: Stats banner ━━━ */}
-      <section ref={s3.ref}>
+      {/* ━━━ S4: 마무리 배너 ━━━ */}
+      <section ref={s4.ref}>
         <div
-          className="flex justify-center items-center flex-wrap"
+          className="text-center"
           style={{
-            background: "linear-gradient(135deg, #1a9de0, #0d8fcc)",
-            padding: "70px 48px",
-            gap: 0,
+            background: "linear-gradient(135deg, #0f2a3a, #1a3a4a)",
+            padding: "56px 24px",
           }}
         >
-          {stats.map((s, i) => (
-            <div key={s.label} className="contents">
-              {i > 0 && (
-                <div
-                  className="hidden md:block flex-shrink-0"
-                  style={{ width: 1, height: 52, background: "rgba(255,255,255,0.25)" }}
-                />
-              )}
-              <div
-                className="flex flex-col items-center justify-center text-center"
-                style={{
-                  flex: 1, minWidth: 140,
-                  opacity: s3.visible ? 1 : 0,
-                  transform: s3.visible ? "translateY(0)" : "translateY(30px)",
-                  transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
-                }}
-              >
-                <div
-                  className="font-extrabold text-white leading-none tracking-tight"
-                  style={{ fontFamily: "var(--font-outfit)", fontSize: "clamp(36px, 4vw, 52px)" }}
-                >
-                  {s.value}
-                </div>
-                <div style={{ fontSize: 15, marginTop: 10, color: "rgba(255,255,255,0.75)" }}>
-                  {s.label}
-                </div>
-              </div>
+          <div
+            style={{
+              opacity: s4.visible ? 1 : 0,
+              transform: s4.visible ? "translateY(0)" : "translateY(30px)",
+              transition: "opacity 0.6s ease, transform 0.6s ease",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "var(--font-noto-serif-kr)",
+                fontSize: "clamp(22px, 2.8vw, 34px)",
+                fontWeight: 700,
+                color: "white",
+                lineHeight: 1.6,
+                wordBreak: "keep-all",
+                marginBottom: 16,
+              }}
+            >
+              환자분의 속을 편안하고 확실하게
+              <br />
+              <span style={{ color: "#7dd3f8" }}>지켜 드리겠습니다.</span>
             </div>
-          ))}
+            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.55)", lineHeight: 1.8 }}>
+              한사랑속편한내과 의료진 일동
+            </p>
+          </div>
         </div>
       </section>
 

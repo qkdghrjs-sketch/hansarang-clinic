@@ -87,7 +87,7 @@ const DOCTORS = [
     ],
   },
   {
-    name: "박상윤",
+    name: "박상운",
     title: "원장 · 가정의학과 전문의",
     specialty: "가정의학과",
     hospital: "고려대 의료원",
@@ -155,7 +155,7 @@ export default function DoctorsPage() {
         ref={s1.ref}
         style={{
           background: "linear-gradient(135deg, #0a1628, #0f2a3a)",
-          padding: "64px 48px",
+          padding: "48px 24px",
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
@@ -211,7 +211,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* ━━━ S2: 탭 + 상세 ━━━ */}
-      <section ref={s2.ref} className="px-5 lg:px-12" style={{ background: "#f8fcff", padding: "80px 48px" }}>
+      <section ref={s2.ref} className="px-5 lg:px-12" style={{ background: "#f8fcff", paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-[1280px] mx-auto">
 
           {/* 탭 버튼 */}

@@ -4,15 +4,16 @@ import { useEffect, useRef, useState } from "react";
 
 interface StatItem {
   target: number;
+  prefix?: string;
   suffix: string;
   label: string;
 }
 
 const stats: StatItem[] = [
-  { target: 154000, suffix: "례", label: "위내시경 시행" },
-  { target: 45000, suffix: "례", label: "대장내시경 시행" },
-  { target: 18830, suffix: "례", label: "대장용종 절제술" },
-  { target: 1054, suffix: "명", label: "암 진단" },
+  { target: 154000, prefix: "+", suffix: "례", label: "위내시경 시행" },
+  { target: 45000, prefix: "+", suffix: "례", label: "대장내시경 시행" },
+  { target: 18830, prefix: "+", suffix: "례", label: "대장용종 절제술" },
+  { target: 1054, prefix: "+", suffix: "명", label: "암 진단" },
   { target: 2009, suffix: "년~", label: "개원 이후 축적된 경험" },
 ];
 
@@ -44,8 +45,8 @@ function StatNumber({ item, started }: { item: StatItem; started: boolean }) {
   return (
     <div className="text-center">
       <div className="text-[clamp(20px,5vw,36px)] font-extrabold text-white leading-none tracking-tight" style={{ fontFamily: "var(--font-outfit)" }}>
-        {item.target === 2009 ? count : count.toLocaleString()}
-        <span className="text-[20px] font-semibold">{item.suffix}</span>
+        {item.prefix && item.prefix}{item.target === 2009 ? count : count.toLocaleString()}
+        <span className="text-[14px] md:text-[20px] font-semibold">{item.suffix}</span>
       </div>
       <div className="text-xs text-white/75 mt-[6px] font-normal">{item.label}</div>
     </div>

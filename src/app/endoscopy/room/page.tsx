@@ -40,13 +40,13 @@ const CARDS = [
   },
   {
     title: "완벽한 내시경 소독 원칙을 철저히 지키고 있습니다.",
-    desc: "9개의 내시경을 구비하여 원활한 검사와 충분한 소독시간을 확보하고 있으며, 1회 내시경, 1회 소독의 원칙을 지키고 있습니다. 마우스피스는 1일 1인 1회 사용하고 매일 멸균 소독합니다. 생검겸자와 처치용구는 EO가스 소독 후 1일 1회 사용합니다.",
+    desc: "7개의 위내시경과 6대의 대장내시경, 총 13대의 내시경을 구비하여 원활한 검사와 충분한 소독시간을 확보하고 있으며, 1회 내시경, 1회 소독의 원칙을 지키고 있습니다. 마우스피스는 1일 1인 1회 사용 후 폐기처분 하고 있습니다.",
   },
 ];
 
 const STATS = [
   { value: "연 1만건+", label: "내시경 검사" },
-  { value: "9대", label: "내시경 보유" },
+  { value: "13대", label: "내시경 보유" },
   { value: "1회", label: "1소독 원칙" },
   { value: "Olympus 290H", label: "최고 사양 장비" },
 ];
@@ -83,7 +83,7 @@ export default function EndoscopyRoomPage() {
         }}
       >
         <Image
-          src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/6043d7f093cc1.jpeg"
+          src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c6493d972c116.png"
           alt="내시경실"
           fill
           unoptimized
@@ -120,7 +120,7 @@ export default function EndoscopyRoomPage() {
 
       {/* ━━━ S2: 특징 4개 카드 ━━━ */}
       <section className="bg-white" ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {CARDS.map((card, i) => (
               <div
@@ -199,7 +199,7 @@ export default function EndoscopyRoomPage() {
       </section>
 
       {/* ━━━ S3: 수치 배너 ━━━ */}
-      <section ref={s3.ref} style={{ background: "linear-gradient(135deg, #0a1628, #0f2a3a)", padding: "64px 48px" }}>
+      <section ref={s3.ref} style={{ background: "linear-gradient(135deg, #0a1628, #0f2a3a)", padding: "48px 24px" }}>
         <div className="max-w-[1280px] mx-auto flex justify-center items-center flex-wrap">
           {STATS.map((s, i) => (
             <div key={s.label} className="contents">
@@ -241,7 +241,7 @@ export default function EndoscopyRoomPage() {
 
       {/* ━━━ S4: 내시경 장비 소개 ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s4.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <h2
             className="text-center font-bold"
             style={{
@@ -266,7 +266,7 @@ export default function EndoscopyRoomPage() {
             >
               <div className="relative w-full overflow-hidden" style={{ borderRadius: 20, boxShadow: "0 12px 40px rgba(56,178,240,0.15)", aspectRatio: "4/3" }}>
                 <Image
-                  src="https://cdn.imweb.me/thumbnail/20240614/5c0d41d1c7e70.jpg"
+                  src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png"
                   alt="OLYMPUS CV-290"
                   fill
                   unoptimized
@@ -349,7 +349,7 @@ export default function EndoscopyRoomPage() {
         ref={s5.ref}
         style={{
           background: "linear-gradient(135deg, #1a9de0, #0d8fcc)",
-          padding: "72px 48px",
+          padding: "56px 24px",
           textAlign: "center",
         }}
       >

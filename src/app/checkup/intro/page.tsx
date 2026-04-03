@@ -31,27 +31,13 @@ const TABS = [
   { label: "종합검진 주의사항", id: "section-caution" },
 ];
 
-const ICONS = [
-  { icon: "⏱️", text: "신속한 (검사 당일)\n결과 확인 가능" },
-  { icon: "🍽️", text: "식사 및 편안한\n휴식 공간 제공" },
-  { icon: "👔", text: "대학병원에서 제공하지 못하는\nVIP전용실 제공\n및 버틀러 서비스" },
-  { icon: "📋", text: "개개인의 질환이나\n가족력에 맞춘\n다양하고 정밀한\n건강검진 프로그램" },
-];
-
-interface Card { img: string; title: string; desc: string }
-
-const CARDS_A: Card[] = [
-  { img: `${IMG}5b1ea004f7d71.png`, title: "편안하고 안락한 공간", desc: "개인 VIP룸을 제공하여 안락한 공간에서 편안한 휴식과 최상의 의료서비스를 제공해드립니다." },
-  { img: `${IMG}31a05bf07525d.png`, title: "특화된 전문의", desc: "8명의 풍부한 경험을 가진 내과전문의들의 노하우로 최상의 검진서비스를 제공해드립니다." },
-  { img: `${IMG}d6c55128d7c5d.png`, title: "대학병원급 최신 장비보유", desc: "대학병원급 내시경장비, 초음파, 임상병리장비를 도입하여 신속하고 정확한 진단이 가능합니다." },
-  { img: `${IMG}751d7204baa45.png`, title: "특화 건강검진 프로그램", desc: "다양한 건강검진 프로그램으로 성별, 연령에 따른 최적의 프로그램을 제공해 드립니다." },
-];
-
-const CARDS_B: Card[] = [
-  { img: `${IMG}24024b5858e8c.png`, title: "VIP 서비스", desc: "검진특화담당직원이 개인별로 안내하여 검사대기시간을 최소화하여 보다 편한 검진을 진행해 드립니다" },
-  { img: `${IMG}e72dc805bf29e.png`, title: "당일검사 당일결과 원데이 서비스", desc: "당일검사 당일결과로 불안한 기다림 없이 최고의 원데이 서비스를 제공해드립니다.(일부 수탁검사 제외)" },
-  { img: `${IMG}6043d7f093cc1.jpeg`, title: "사후관리 시스템", desc: "체계적이고 전문적인 사후관리 시스템으로 평생 건강파트너 서비스를 제공해드립니다." },
-  { img: `${IMG}5b1ea004f7d71.png`, title: "대학병원 및 전문의원과 긴밀한 협력의료체계", desc: "건강진단후 이상 발견시 대학병원과 연결하여 빠르고 정확한 치료를 받으실 수 있도록 연계해드리며 산부인과, 방사선과 등 전문의원과 긴밀한 협력시스템으로 원스탑의료서비스를 제공합니다." },
+const INTRO_SERVICES = [
+  { icon: "⏱️", color: "#1a9de0", title: "당일 결과 확인", desc: "검사 당일 결과를 바로 확인할 수 있어 불안한 기다림이 없습니다." },
+  { icon: "👨‍⚕️", color: "#0ea5aa", title: "8인 전문의 협진", desc: "대학병원 출신 내과전문의들의 풍부한 경험으로 정확하게 진단합니다." },
+  { icon: "🏨", color: "#6366f1", title: "VIP 전용 검진 공간", desc: "개인 VIP룸과 전담 직원 배치로 대기 없이 편안하게 검진합니다." },
+  { icon: "🔬", color: "#f59e0b", title: "대학병원급 최신 장비", desc: "내시경, 초음파, 임상병리 장비를 도입하여 정밀한 진단이 가능합니다." },
+  { icon: "📋", color: "#1a9de0", title: "맞춤형 검진 프로그램", desc: "성별, 연령, 가족력에 맞춘 다양한 정밀 검진 프로그램을 운영합니다." },
+  { icon: "🤝", color: "#0ea5aa", title: "대학병원 협력 체계", desc: "이상 발견 시 대학병원 연계로 빠르고 정확한 치료를 받으실 수 있습니다." },
 ];
 
 const PROGRAMS = [
@@ -107,36 +93,6 @@ const EMPLOY_ROWS = [
   { label: "검사비용", value: "일반회사채용 : 3만원" },
 ];
 
-/* ━━━ Card Grid ━━━ */
-function CardGrid({ cards, visible }: { cards: Card[]; visible: boolean }) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      {cards.map((c, i) => (
-        <div
-          key={i}
-          className="group flex flex-col sm:flex-row overflow-hidden"
-          style={{
-            background: "white", border: "1px solid #dceef8", borderRadius: 16,
-            transition: "all 0.3s",
-            opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)",
-            transitionDelay: visible ? `${i * 0.1}s` : "0s",
-          }}
-          onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 16px 48px rgba(56,178,240,0.14)"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
-        >
-          <div className="relative w-full sm:w-[240px] h-[200px] sm:h-auto flex-shrink-0 overflow-hidden">
-            <Image src={c.img} alt={c.title} fill unoptimized className="object-cover transition-transform duration-500 group-hover:scale-[1.05]" />
-          </div>
-          <div className="flex flex-col justify-center" style={{ padding: "28px 32px", wordBreak: "keep-all" }}>
-            <div style={{ fontSize: 18, fontWeight: 700, color: "#1a9de0", marginBottom: 12 }}>{c.title}</div>
-            <p className="font-light" style={{ fontSize: 14, color: "#4a7a90", lineHeight: 1.85 }}>{c.desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 /* ━━━ Divider ━━━ */
 function SectionDivider({ text }: { text: string }) {
   return (
@@ -186,8 +142,8 @@ export default function CheckupIntroPage() {
 
       {/* ━━━ Sticky Tabs ━━━ */}
       <div
-        className="sticky z-[100] bg-white overflow-x-auto"
-        style={{ top: 76, borderBottom: "2px solid #dceef8", boxShadow: "0 4px 16px rgba(56,178,240,0.08)", WebkitOverflowScrolling: "touch" }}
+        className="sticky z-[100] bg-white overflow-x-auto top-[60px] md:top-[76px]"
+        style={{ borderBottom: "2px solid #dceef8", boxShadow: "0 4px 16px rgba(56,178,240,0.08)", WebkitOverflowScrolling: "touch" }}
       >
         <div className="flex justify-center gap-0 max-w-[1280px] mx-auto">
           {TABS.map((t) => (
@@ -210,36 +166,125 @@ export default function CheckupIntroPage() {
       </div>
 
       {/* ━━━ S1: 센터소개 ━━━ */}
-      <section id="section-intro" className="bg-white" style={{ scrollMarginTop: 140 }} ref={s1.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px 80px" }}>
-          {/* A. Icons */}
-          <h2 style={{ ...titleStyle, fontSize: "clamp(24px,3vw,34px)", marginBottom: 56, opacity: s1.v ? 1 : 0, transform: s1.v ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.6s, transform 0.6s" }}>
-            한사랑속편한내과 종합검진센터 소개
-          </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 overflow-hidden" style={{ border: "1px solid #dceef8", borderRadius: 20 }}>
-            {ICONS.map((item, i) => (
-              <div key={i} className="group text-center transition-colors duration-300 hover:bg-[#f0f9ff]" style={{
-                padding: "40px 24px", borderRight: i < 3 ? "1px solid #dceef8" : "none",
-                opacity: s1.v ? 1 : 0, transform: s1.v ? "translateY(0)" : "translateY(30px)",
-                transition: `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s, background 0.3s`,
-              }}>
-                <div className="w-[72px] h-[72px] rounded-full flex items-center justify-center text-[28px] mx-auto mb-5 transition-all duration-300 group-hover:bg-[#1a9de0] group-hover:border-[#1a9de0]" style={{ background: "#f0f9ff", border: "2px solid #dceef8" }}>
-                  {item.icon}
+      <section id="section-intro" style={{ scrollMarginTop: 140 }} ref={s1.ref}>
+        {/* 히어로 */}
+        <div className="relative overflow-hidden h-[280px] md:h-[380px]">
+          <Image
+            src={`${IMG}3ca711a1c2ad7.png`}
+            alt="종합검진센터"
+            fill
+            unoptimized
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+          <div style={{ position: "absolute", inset: 0, background: "rgba(10,22,40,0.65)" }} />
+          <div
+            className="relative z-10 h-full flex flex-col justify-center items-center text-center max-w-[1280px] mx-auto px-6 lg:px-12"
+            style={{
+              opacity: s1.v ? 1 : 0,
+              transform: s1.v ? "translateY(0)" : "translateY(40px)",
+              transition: "opacity 0.7s ease, transform 0.7s ease",
+            }}
+          >
+            <div className="inline-flex items-center gap-3" style={{ fontSize: 12, fontWeight: 600, letterSpacing: 2.5, color: "#7dd3f8", fontFamily: "var(--font-outfit)", textTransform: "uppercase", marginBottom: 16 }}>
+              <span style={{ width: 20, height: 2, background: "#38b2f0", borderRadius: 1 }} />
+              CHECKUP CENTER
+              <span style={{ width: 20, height: 2, background: "#38b2f0", borderRadius: 1 }} />
+            </div>
+            <h2
+              className="font-bold text-white"
+              style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(28px, 3.5vw, 44px)", letterSpacing: "-1px", lineHeight: 1.4, marginBottom: 16 }}
+            >
+              편안함 속에서 만나는
+              <br />
+              정밀한 건강검진
+            </h2>
+            <p style={{ fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.8, maxWidth: 520, wordBreak: "keep-all" }}>
+              8인의 전문의와 대학병원급 장비, VIP 전용 공간까지.
+              <br />
+              한사랑속편한내과에서 경험하세요.
+            </p>
+          </div>
+        </div>
+
+        {/* 6가지 서비스 카드 */}
+        <div className="px-5 lg:px-12" style={{ background: "#f8fcff", paddingTop: 80, paddingBottom: 80 }}>
+          <div className="max-w-[1280px] mx-auto">
+            <div
+              className="text-center mb-12"
+              style={{
+                opacity: s1.v ? 1 : 0,
+                transform: s1.v ? "translateY(0)" : "translateY(30px)",
+                transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+              }}
+            >
+              <h3
+                className="font-bold"
+                style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(24px, 2.8vw, 32px)", color: "#0f2a3a", marginBottom: 12 }}
+              >
+                건강검진의 특별함
+              </h3>
+              <p style={{ fontSize: 15, color: "#82aabf" }}>한사랑속편한내과만의 차별화된 검진 서비스</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {INTRO_SERVICES.map((s, i) => (
+                <div
+                  key={s.title}
+                  className="group bg-white transition-all duration-300 hover:-translate-y-1"
+                  style={{
+                    border: "1.5px solid #dceef8",
+                    borderRadius: 20,
+                    padding: "32px 28px",
+                    opacity: s1.v ? 1 : 0,
+                    transform: s1.v ? "translateY(0)" : "translateY(30px)",
+                    transition: `opacity 0.5s ease ${0.15 + i * 0.07}s, transform 0.5s ease ${0.15 + i * 0.07}s, box-shadow 0.3s ease, border-color 0.3s ease`,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = "0 12px 40px rgba(56,178,240,0.14)";
+                    e.currentTarget.style.borderColor = "rgba(56,178,240,0.3)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "none";
+                    e.currentTarget.style.borderColor = "#dceef8";
+                  }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[22px]"
+                      style={{ background: `${s.color}12` }}
+                    >
+                      {s.icon}
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 16, fontWeight: 700, color: "#0f2a3a", marginBottom: 8 }}>{s.title}</div>
+                      <p style={{ fontSize: 13.5, color: "#4a7a90", lineHeight: 1.7, wordBreak: "keep-all" }}>{s.desc}</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="whitespace-pre-line" style={{ fontSize: 14, color: "#4a7a90", lineHeight: 1.75, wordBreak: "keep-all" }}>{item.text}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* 수치 배너 */}
+        <div style={{ background: "linear-gradient(135deg, #0f2a3a, #1a3a4a)", padding: "48px 24px" }}>
+          <div className="max-w-[1280px] mx-auto flex flex-wrap justify-center items-center">
+            {[
+              { value: "8인", label: "전문의 협진" },
+              { value: "당일", label: "결과 확인" },
+              { value: "VIP", label: "전용 공간" },
+              { value: "30년+", label: "진료 경험" },
+            ].map((stat, i) => (
+              <div key={stat.label} className="contents">
+                {i > 0 && <div className="hidden md:block flex-shrink-0" style={{ width: 1, height: 48, background: "rgba(255,255,255,0.15)" }} />}
+                <div className="flex flex-col items-center justify-center text-center" style={{ flex: 1, minWidth: 130, padding: "8px 20px" }}>
+                  <div className="font-extrabold leading-none tracking-tight" style={{ fontFamily: "var(--font-outfit)", fontSize: "clamp(28px, 3.5vw, 40px)", color: "#7dd3f8" }}>
+                    {stat.value}
+                  </div>
+                  <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginTop: 6 }}>{stat.label}</div>
+                </div>
               </div>
             ))}
-          </div>
-
-          {/* B. 특별함 */}
-          <div style={{ marginTop: 80 }}>
-            <h3 style={{ ...titleStyle, fontSize: "clamp(22px,2.8vw,32px)", marginBottom: 48 }}>한사랑속편한내과 건강검진의 특별함</h3>
-            <CardGrid cards={CARDS_A} visible={s1.v} />
-          </div>
-
-          {/* C. 서비스 */}
-          <div style={{ marginTop: 80 }}>
-            <CardGrid cards={CARDS_B} visible={s1.v} />
           </div>
         </div>
       </section>
@@ -248,7 +293,7 @@ export default function CheckupIntroPage() {
 
       {/* ━━━ S2: 종합검진프로그램 ━━━ */}
       <section id="section-program" style={{ background: "#f8fcff", scrollMarginTop: 140 }} ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <h2 style={{ ...titleStyle, fontSize: "clamp(24px,3vw,34px)", marginBottom: 48, opacity: s2.v ? 1 : 0, transform: s2.v ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.6s, transform 0.6s" }}>
             종합검진프로그램
           </h2>
@@ -289,10 +334,10 @@ export default function CheckupIntroPage() {
 
       {/* ━━━ S3: 채용검진 ━━━ */}
       <section id="section-employment" className="bg-white" style={{ scrollMarginTop: 140 }} ref={s3.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           {/* Hero banner */}
           <div className="text-center" style={{
-            background: "linear-gradient(135deg, #0a1628, #0f2a3a)", borderRadius: 20, padding: "60px 48px", marginBottom: 60,
+            background: "linear-gradient(135deg, #0a1628, #0f2a3a)", borderRadius: 20, padding: "48px 24px", marginBottom: 60,
             opacity: s3.v ? 1 : 0, transform: s3.v ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.6s, transform 0.6s",
           }}>
             <h3 className="font-bold text-white" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.5vw,32px)", marginBottom: 16 }}>
@@ -331,7 +376,7 @@ export default function CheckupIntroPage() {
 
       {/* ━━━ S4: 주의사항 ━━━ */}
       <section id="section-caution" style={{ background: "#f8fcff", scrollMarginTop: 140 }} ref={s4.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <h2 style={{ ...titleStyle, fontSize: "clamp(24px,3vw,34px)", marginBottom: 48, opacity: s4.v ? 1 : 0, transform: s4.v ? "translateY(0)" : "translateY(40px)", transition: "opacity 0.6s, transform 0.6s" }}>
             종합검진 주의사항
           </h2>
@@ -372,7 +417,7 @@ export default function CheckupIntroPage() {
 
       {/* ━━━ CTA ━━━ */}
       <section>
-        <div className="text-center" style={{ background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "72px 48px" }}>
+        <div className="text-center" style={{ background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "56px 24px" }}>
           <h3 className="font-bold text-white" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.5vw,32px)", marginBottom: 12 }}>
             지금 바로 건강검진을 예약하세요
           </h3>

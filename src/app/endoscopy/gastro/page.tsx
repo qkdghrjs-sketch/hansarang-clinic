@@ -26,12 +26,12 @@ function useReveal() {
 
 /* ━━━ Data ━━━ */
 const DISEASES = [
-  { name: "역류성 식도염", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5b1ea004f7d71.png" },
-  { name: "식도암", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/31a05bf07525d.png" },
-  { name: "조기 위암", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/d6c55128d7c5d.png" },
-  { name: "진행성 위암", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/751d7204baa45.png" },
-  { name: "위 궤양", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e72dc805bf29e.png" },
-  { name: "십이지장 위궤양", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/6043d7f093cc1.jpeg" },
+  { name: "역류성 식도염", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/7776a733ca8bb.jpeg" },
+  { name: "식도암", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/0da02f859ba01.jpeg" },
+  { name: "조기 위암", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c9ae7485a21dd.jpeg" },
+  { name: "진행성 위암", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/ec1ab5b8b9a3c.jpeg" },
+  { name: "위 궤양", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/03451ccef9d59.jpeg" },
+  { name: "십이지장 위궤양", img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/c027be3686a76.jpeg" },
 ];
 
 const CHART_DATA = [
@@ -53,6 +53,7 @@ export default function GastroPage() {
   const s5 = useReveal();
   const s6 = useReveal();
   const s7 = useReveal();
+  const s8 = useReveal();
 
   return (
     <>
@@ -84,7 +85,7 @@ export default function GastroPage() {
 
       {/* ━━━ S2: 위 내시경이란? ━━━ */}
       <section className="bg-white" ref={s2.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "100px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 100, paddingBottom: 100 }}>
           <h2 className="text-center font-bold" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(24px,3vw,34px)", color: "#0f2a3a", marginBottom: 56 }}>
             위 내시경은 어떤 검사일까요?
           </h2>
@@ -138,7 +139,7 @@ export default function GastroPage() {
 
       {/* ━━━ S3: 진단 가능한 질병 ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s3.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <h2 className="text-center font-bold" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.8vw,32px)", color: "#0f2a3a", marginBottom: 48 }}>
             위 내시경 검사로 진단이 가능한 질병
           </h2>
@@ -170,7 +171,7 @@ export default function GastroPage() {
 
       {/* ━━━ S4: 검사 시기 ━━━ */}
       <section className="bg-white" ref={s4.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <h2 className="text-center font-bold" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.8vw,32px)", color: "#0f2a3a", marginBottom: 48 }}>
             위 내시경 검사는 언제 받아야 하나?
           </h2>
@@ -207,11 +208,11 @@ export default function GastroPage() {
 
       {/* ━━━ S5: 5년 생존율 차트 ━━━ */}
       <section style={{ background: "#f8fcff" }} ref={s5.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <h2 className="text-center font-bold" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.8vw,32px)", color: "#0f2a3a", marginBottom: 48 }}>
             위암의 병기별 5년 생존율
           </h2>
-          <div style={{ background: "white", border: "1px solid #dceef8", borderRadius: 20, padding: "40px 48px", boxShadow: "0 4px 24px rgba(56,178,240,0.08)" }}>
+          <div style={{ background: "white", border: "1px solid #dceef8", borderRadius: 20, padding: "40px 24px", boxShadow: "0 4px 24px rgba(56,178,240,0.08)" }}>
             <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
               <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "center", gap: 20, height: 300, paddingBottom: 40, borderBottom: "2px solid #f0f7fc", position: "relative", minWidth: 600 }}>
                 {/* Y축 가이드 */}
@@ -258,52 +259,193 @@ export default function GastroPage() {
         </div>
       </section>
 
-      {/* ━━━ S6: 해상도 ━━━ */}
+      {/* ━━━ S6: OLYMPUS CV-290 장비 소개 ━━━ */}
       <section className="bg-white" ref={s6.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
-          <h2 className="text-center font-bold" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.8vw,32px)", color: "#0f2a3a", marginBottom: 32 }}>
-            위 내시경의 해상도 (정확도)
-          </h2>
-          <div
-            className="text-center"
-            style={{
-              maxWidth: 900, margin: "0 auto 32px", fontSize: 15, color: "#4a7a90", lineHeight: 2.0, wordBreak: "keep-all",
-              opacity: s6.v ? 1 : 0, transform: s6.v ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.6s ease, transform 0.6s ease",
-            }}
-          >
-            최근 위내시경의 해상도는 아주 뛰어난 상태로 1mm이하의 작은 병변도 확대해서 관찰이 가능합니다. 따라서 내시경 검사는 정상과 별 차이가 없어 보이는 미세한 조기 위암과, 조기 식도암 및 조기 대장암을 진단하는데 가장 정밀하면서 정확한 방법입니다.
-          </div>
-          <div style={{ maxWidth: 900, margin: "0 auto" }}>
-            <div style={{ fontSize: 17, fontWeight: 700, color: "#1a9de0", marginBottom: 12, textAlign: "center" }}>위 내시경 해상도 사진</div>
-            <p className="text-center" style={{ fontSize: 14, color: "#4a7a90", lineHeight: 1.8, wordBreak: "keep-all", marginBottom: 28 }}>
-              5x5 mm크기의 작은 사각형을 실제 17인치 모니터에 꽉 차 보일 만큼 정확하게 확대해서 관찰할 수 있으며 1mm 눈금보다도 작은 부분도 정확하게 관찰할 수 있을 정도로 정확합니다.
-            </p>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* 왼쪽: 사진 */}
             <div
+              className="group"
               style={{
-                background: "white", border: "1px solid #dceef8", borderRadius: 16, padding: 28,
-                opacity: s6.v ? 1 : 0, transform: s6.v ? "translateY(0)" : "translateY(20px)",
-                transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
+                opacity: s6.v ? 1 : 0,
+                transform: s6.v ? "translateX(0)" : "translateX(-40px)",
+                transition: "opacity 0.6s ease, transform 0.6s ease",
               }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                {[0, 1, 2].map((i) => (
-                  <div key={i} className="relative overflow-hidden" style={{ height: 200, borderRadius: 10 }}>
-                    <Image src="https://cdn.imweb.me/thumbnail/20240614/5c0d41d1c7e70.jpg" alt={`내시경 해상도 ${i + 1}`} fill unoptimized style={{ objectFit: "cover" }} />
+              <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 12px 48px rgba(56,178,240,0.12)" }}>
+                <Image
+                  src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png"
+                  alt="OLYMPUS CV-290"
+                  width={640}
+                  height={480}
+                  unoptimized
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  style={{ aspectRatio: "4/3" }}
+                />
+              </div>
+            </div>
+
+            {/* 오른쪽: 텍스트 */}
+            <div
+              style={{
+                opacity: s6.v ? 1 : 0,
+                transform: s6.v ? "translateX(0)" : "translateX(40px)",
+                transition: "opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s",
+                wordBreak: "keep-all",
+              }}
+            >
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#1a9de0", letterSpacing: 1.5, fontFamily: "var(--font-outfit)", textTransform: "uppercase", marginBottom: 12 }}>
+                EQUIPMENT
+              </div>
+              <h3
+                className="font-bold"
+                style={{
+                  fontFamily: "var(--font-noto-serif-kr)",
+                  fontSize: "clamp(24px, 2.8vw, 32px)",
+                  color: "#0f2a3a", letterSpacing: "-0.5px",
+                  lineHeight: 1.4, marginBottom: 20,
+                }}
+              >
+                대학병원과 동일한
+                <br />
+                최고 사양 내시경 장비
+              </h3>
+              <div
+                style={{
+                  fontFamily: "var(--font-outfit)",
+                  fontSize: 28, fontWeight: 800, color: "#0f2a3a",
+                  letterSpacing: "-0.5px", marginBottom: 8,
+                }}
+              >
+                OLYMPUS CV-290
+              </div>
+              <div style={{ fontSize: 14, color: "#1a9de0", fontWeight: 600, marginBottom: 24 }}>
+                현존하는 최고 사양의 내시경 시스템
+              </div>
+              <p style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9, marginBottom: 24 }}>
+                Full HD 화질과 NBI 색소내시경 기능으로 식도, 위 점막의 미세한 변화까지 면밀히 관찰할 수 있어
+                1mm 이하의 조기 병변도 정확하게 진단합니다.
+              </p>
+
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  { value: "3대", label: "내시경 본체" },
+                  { value: "7대", label: "위내시경 Fiber" },
+                  { value: "6대", label: "대장내시경 Fiber" },
+                ].map((es) => (
+                  <div
+                    key={es.label}
+                    className="text-center"
+                    style={{ background: "#f0f9ff", border: "1px solid #dceef8", borderRadius: 12, padding: 16 }}
+                  >
+                    <div style={{ fontFamily: "var(--font-outfit)", fontSize: 22, fontWeight: 800, color: "#1a9de0" }}>
+                      {es.value}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#82aabf", marginTop: 4 }}>{es.label}</div>
                   </div>
                 ))}
               </div>
-              <div style={{ textAlign: "center", marginTop: 16, fontSize: 13, color: "#82aabf" }}>내시경 사진</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ━━━ S7: 하단 CTA ━━━ */}
+      {/* ━━━ S7: AI 내시경 ━━━ */}
+      <section style={{ background: "#f8fcff" }} ref={s7.ref}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
+          {/* AI 히어로 배너 */}
+          <div
+            className="text-center overflow-hidden relative"
+            style={{
+              background: "linear-gradient(135deg, #1e2a5e, #2f6bba)",
+              borderRadius: 20, padding: "48px 28px", marginBottom: 32,
+              opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)",
+              transition: "opacity 0.6s ease, transform 0.6s ease",
+            }}
+          >
+            <div style={{ position: "absolute", top: -40, right: -40, width: 200, height: 200, background: "rgba(255,255,255,0.04)", borderRadius: "50%" }} />
+            <h3 className="font-bold text-white relative z-10" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(24px, 3vw, 32px)", lineHeight: 1.4, marginBottom: 14 }}>
+              <span style={{ color: "#ffd84d" }}>AI</span>와 <span style={{ color: "#ffd84d" }}>전문의</span>가 함께 봅니다
+              <br />
+              단 하나의 병변도 놓치지 않도록
+            </h3>
+            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.8)", lineHeight: 1.85, position: "relative", zIndex: 1 }}>
+              내과 전문의의 숙련된 노하우에 AI의 정밀함을 더해
+              <br />
+              더 꼼꼼한 내시경 검사를 제공합니다.
+            </p>
+          </div>
+
+          {/* AI 특장점 3카드 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+            {[
+              { icon: "🤖", bg: "#e8f0fe", title: "이중 판독", desc: "전문의가 한 번, AI가 또 한 번 확인하여 진단 정확도를 높입니다." },
+              { icon: "📊", bg: "#eef4fb", title: "데이터 기반 정밀 진단", desc: "수만 건의 학습 데이터를 기반으로 미세 병변을 실시간 감지합니다." },
+              { icon: "🛡️", bg: "#e8f5e9", title: "실시간 보조 판독", desc: "검사 중 AI가 실시간으로 분석하여 의사의 진단을 보조합니다." },
+            ].map((card, i) => (
+              <div
+                key={card.title}
+                className="group bg-white text-center transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  border: "1.5px solid #dceef8", borderRadius: 20, padding: "32px 24px",
+                  opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)",
+                  transition: `opacity 0.5s ease ${0.1 + i * 0.08}s, transform 0.5s ease ${0.1 + i * 0.08}s, box-shadow 0.3s ease`,
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 12px 40px rgba(56,178,240,0.12)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "none"; }}
+              >
+                <div className="w-16 h-16 rounded-full flex items-center justify-center text-[28px] mx-auto mb-4" style={{ background: card.bg }}>
+                  {card.icon}
+                </div>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#0f2a3a", marginBottom: 8 }}>{card.title}</div>
+                <p style={{ fontSize: 13.5, color: "#4a7a90", lineHeight: 1.7, wordBreak: "keep-all" }}>{card.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* AI 전후 비교 */}
+          <div
+            className="overflow-hidden mx-auto"
+            style={{
+              background: "linear-gradient(135deg, #1e2a3e, #0f2a3a)", borderRadius: 20,
+              padding: "32px 28px",
+              maxWidth: 720,
+              opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)",
+              transition: "opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s",
+            }}
+          >
+            <div className="text-center mb-5">
+              <span style={{ fontSize: 14, fontWeight: 700, color: "white" }}>AI 사용 전</span>
+              <span style={{ color: "rgba(255,255,255,0.3)", margin: "0 10px" }}>→</span>
+              <span style={{ fontSize: 14, fontWeight: 700, color: "#ffd84d" }}>AI 사용 후</span>
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {[
+                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5f2cf402993d3.png", label: "" },
+                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/2121bbf1517bb.png", label: "" },
+                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a5262feaebc9e.png", label: "AI 감지" },
+                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/ab63fc9af9913.png", label: "AI 감지" },
+              ].map((item, i) => (
+                <div key={i} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "1", border: item.label ? "2px solid #ffd84d" : "2px solid rgba(255,255,255,0.1)" }}>
+                  <Image src={item.src} alt={`AI 내시경 ${i + 1}`} fill unoptimized className="object-cover" />
+                  {item.label && (
+                    <div className="absolute bottom-1 right-1" style={{ background: "#ffd84d", color: "#1e2a3e", fontSize: 10, fontWeight: 700, padding: "2px 7px", borderRadius: 8 }}>
+                      {item.label}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ S8: 하단 CTA ━━━ */}
       <section
-        ref={s7.ref}
-        style={{ background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "72px 48px", textAlign: "center" }}
+        ref={s8.ref}
+        style={{ background: "linear-gradient(135deg, #1a9de0, #0d8fcc)", padding: "56px 24px", textAlign: "center" }}
       >
-        <div style={{ opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)", transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s" }}>
+        <div style={{ opacity: s8.v ? 1 : 0, transform: s8.v ? "translateY(0)" : "translateY(30px)", transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s" }}>
           <h2 style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.8vw,36px)", fontWeight: 700, color: "white", lineHeight: 1.5, wordBreak: "keep-all", marginBottom: 12 }}>
             조기 발견이 완치의 지름길입니다
           </h2>

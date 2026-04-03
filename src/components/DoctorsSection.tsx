@@ -83,7 +83,7 @@ const DOCTORS = [
     ],
   },
   {
-    name: "박상윤",
+    name: "박상운",
     title: "원장 · 가정의학과 전문의",
     specialty: "가정의학과",
     hospital: "고려대 의료원",
@@ -285,7 +285,7 @@ export default function DoctorsSection() {
                 <div
                   style={{
                     fontFamily: "var(--font-noto-serif-kr)",
-                    fontSize: 28, fontWeight: 700, color: "white",
+                    fontSize: "clamp(22px, 4vw, 28px)", fontWeight: 700, color: "white",
                     letterSpacing: "-0.8px",
                   }}
                 >

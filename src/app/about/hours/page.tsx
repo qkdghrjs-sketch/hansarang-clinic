@@ -31,23 +31,23 @@ const OUTPATIENT = [
   { name: "최영균", am: [0, 0, 1, 1, 0, 0], pm: [0, 1, 0, 0, 1, 0] },
   { name: "김수지", am: [0, 0, 1, 0, 1, 0], pm: [0, 1, 1, 0, 0, 0] },
   { name: "현보라", am: [1, 0, 0, 1, 0, 0], pm: [1, 0, 1, 1, 1, 0] },
-  { name: "박상윤", am: [0, 1, 0, 0, 1, 1], pm: [1, 0, 0, 0, 1, 0] },
+  { name: "박상운", am: [0, 1, 0, 0, 1, 1], pm: [1, 0, 0, 0, 1, 0] },
 ];
 
 const ENDO_AM = [
-  ["장윤경", "박상윤", "최영균"],
+  ["장윤경", "박상운", "최영균"],
   ["김두랑", "김수지", "최영균"],
-  ["장윤경", "박상윤", "현보라(검진진료)"],
-  ["김영진", "박상윤", "김수지"],
+  ["장윤경", "박상운", "현보라(검진진료)"],
+  ["김영진", "박상운", "김수지"],
   ["오성남", "최영균", "현보라(검진진료)"],
   ["김수지", "최영균", "현보라(검진진료)"],
 ];
 
 const ENDO_PM = [
   ["김영진", "최영균"],
-  ["오성남", "박상윤"],
+  ["오성남", "박상운"],
   ["김영진", "최영균"],
-  ["김수지", "박상윤"],
+  ["김수지", "박상운"],
   ["김두랑", "김수지"],
   [],
 ];
@@ -91,14 +91,14 @@ export default function HoursPage() {
 
       {/* ━━━ S1: Operating hours card (no bg image) ━━━ */}
       <section ref={s1.ref} style={{ background: "linear-gradient(135deg, #f0f9ff, #e8f4fd)" }}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "60px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <div
             style={{
               background: "white",
               borderRadius: 20,
               border: "1px solid #dceef8",
               boxShadow: "0 8px 40px rgba(56,178,240,0.10)",
-              padding: "40px 48px",
+              padding: "40px 24px",
               maxWidth: 560,
               margin: "0 auto",
               opacity: s1.v ? 1 : 0,
@@ -132,9 +132,7 @@ export default function HoursPage() {
               </div>
             ))}
 
-            <a
-              href="tel:031-912-8720"
-              className="block no-underline text-center"
+            <div
               style={{
                 marginTop: 28,
                 background: "linear-gradient(135deg, #1a9de0, #0d8fcc)",
@@ -142,14 +140,26 @@ export default function HoursPage() {
                 padding: "20px 24px",
               }}
             >
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.75)" }}>예약 및 상담전화</div>
-              <div
-                className="font-extrabold text-white"
-                style={{ fontFamily: "var(--font-outfit)", fontSize: 32, letterSpacing: "1px" }}
-              >
-                031.912.8720
+              <a href="tel:031-912-8720" className="block no-underline text-center">
+                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.75)" }}>대표전화</div>
+                <div
+                  className="font-extrabold text-white"
+                  style={{ fontFamily: "var(--font-outfit)", fontSize: 32, letterSpacing: "1px" }}
+                >
+                  031.912.8720
+                </div>
+              </a>
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.2)", marginTop: 14, paddingTop: 14, display: "flex", flexDirection: "column", gap: 8 }}>
+                <a href="tel:031-917-9008" className="flex items-center justify-between no-underline" style={{ fontSize: 13 }}>
+                  <span style={{ color: "rgba(255,255,255,0.7)" }}>국가건강검진</span>
+                  <span style={{ fontFamily: "var(--font-outfit)", fontWeight: 700, color: "white" }}>031.917.9008</span>
+                </a>
+                <a href="tel:031-916-8720" className="flex items-center justify-between no-underline" style={{ fontSize: 13 }}>
+                  <span style={{ color: "rgba(255,255,255,0.7)" }}>종합검진실</span>
+                  <span style={{ fontFamily: "var(--font-outfit)", fontWeight: 700, color: "white" }}>031.916.8720</span>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -159,7 +169,7 @@ export default function HoursPage() {
         <div
           className="max-w-[1280px] mx-auto px-5 lg:px-12"
           style={{
-            padding: "80px 48px",
+            paddingTop: 80, paddingBottom: 80,
             opacity: s2.v ? 1 : 0,
             transform: s2.v ? "translateY(0)" : "translateY(40px)",
             transition: "opacity 0.6s ease, transform 0.6s ease",
@@ -265,7 +275,7 @@ export default function HoursPage() {
         <div
           className="max-w-[1280px] mx-auto px-5 lg:px-12"
           style={{
-            padding: "80px 48px",
+            paddingTop: 80, paddingBottom: 80,
             opacity: s3.v ? 1 : 0,
             transform: s3.v ? "translateY(0)" : "translateY(40px)",
             transition: "opacity 0.6s ease, transform 0.6s ease",
@@ -387,7 +397,7 @@ export default function HoursPage() {
 
       {/* ━━━ S4: Features ━━━ */}
       <section className="bg-white" ref={s4.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ padding: "80px 48px" }}>
+        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {FEATURES.map((f, i) => (
               <div
