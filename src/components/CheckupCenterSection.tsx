@@ -129,10 +129,10 @@ export default function CheckupCenterSection() {
     <section ref={sectionRef} id="checkup-center" className="overflow-hidden">
       {/* ━━━ Header (dark) ━━━ */}
       <div
-        className="relative overflow-hidden"
+        className="relative overflow-hidden py-10 md:py-[60px] px-5 md:px-6 lg:px-12"
         style={{
           background: "linear-gradient(135deg, #0a1628 0%, #0f2a3a 50%, #1a3a4a 100%)",
-          padding: "60px 20px 80px",
+          paddingBottom: "clamp(60px, 10vw, 80px)",
         }}
       >
         {/* BG glows */}
@@ -204,7 +204,7 @@ export default function CheckupCenterSection() {
       </div>
 
       {/* ━━━ Cards grid ━━━ */}
-      <div style={{ background: "#f8fcff", padding: "0 24px 100px" }}>
+      <div className="px-5 md:px-6 pb-16 md:pb-[100px]" style={{ background: "#f8fcff" }}>
         <div
           ref={cardsRef}
           className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -284,33 +284,31 @@ export default function CheckupCenterSection() {
 
         {/* ━━━ Stats banner ━━━ */}
         <div
-          className="max-w-[1280px] mx-auto flex justify-center items-center flex-wrap"
+          className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4"
           style={{
             background: "linear-gradient(135deg, #1a9de0, #0d8fcc)",
             borderRadius: 20,
-            padding: "32px 20px",
-            marginTop: 40,
-            gap: 0,
+            padding: "28px 16px",
+            marginTop: 32,
             opacity: cardsVisible ? 1 : 0,
             transform: cardsVisible ? "translateY(0)" : "translateY(30px)",
             transition: "opacity 0.7s ease 0.5s, transform 0.7s ease 0.5s",
           }}
         >
           {stats.map((s, i) => (
-            <div key={s.label} className="contents">
-              {i > 0 && (
-                <div className="hidden md:block flex-shrink-0" style={{ width: 1, height: 48, background: "rgba(255,255,255,0.25)" }} />
-              )}
-              <div className="flex flex-col items-center justify-center text-center" style={{ flex: 1, minWidth: 120 }}>
-                <div
-                  className="text-[24px] md:text-[36px] font-extrabold text-white leading-none tracking-tight"
-                  style={{ fontFamily: "var(--font-outfit)" }}
-                >
-                  {s.value}
-                </div>
-                <div className="text-[13px] mt-[6px]" style={{ color: "rgba(255,255,255,0.75)" }}>
-                  {s.label}
-                </div>
+            <div
+              key={s.label}
+              className="flex flex-col items-center justify-center text-center py-3"
+              style={{ borderLeft: i % 2 === 0 ? "none" : "1px solid rgba(255,255,255,0.2)" }}
+            >
+              <div
+                className="text-[22px] md:text-[32px] font-extrabold text-white leading-none tracking-tight"
+                style={{ fontFamily: "var(--font-outfit)" }}
+              >
+                {s.value}
+              </div>
+              <div className="text-[12px] md:text-[13px] mt-[6px]" style={{ color: "rgba(255,255,255,0.75)" }}>
+                {s.label}
               </div>
             </div>
           ))}

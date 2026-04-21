@@ -80,7 +80,12 @@ export default function StatsBar() {
     >
       <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-5 justify-items-center items-center">
         {stats.map((item, i) => (
-          <StatNumber key={i} item={item} started={started} />
+          <div
+            key={i}
+            className={i === stats.length - 1 && stats.length % 2 !== 0 ? "col-span-2 md:col-span-1" : ""}
+          >
+            <StatNumber item={item} started={started} />
+          </div>
         ))}
       </div>
     </div>

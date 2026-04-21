@@ -229,7 +229,7 @@ export default function EndoscopySection() {
         </div>
 
         {/* ── 2-column grid ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 items-start mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-8 lg:gap-12 items-start mb-8 lg:mb-14">
 
           {/* ── Left column: Photo + stats + quote ── */}
           <div
@@ -241,7 +241,7 @@ export default function EndoscopySection() {
           >
             {/* Photo */}
             <div className="relative rounded-[20px] overflow-hidden group cursor-pointer">
-              <div className="relative aspect-[4/5]">
+              <div className="relative aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/5]">
                 <Image
                   src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png"
                   alt="OLYMPUS CV-290 내시경 장비"
@@ -484,7 +484,7 @@ export default function EndoscopySection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
             {records.map((r, i) => (
               <div key={i} className="relative flex justify-center">
                 {/* Divider (desktop only, not before first) */}

@@ -14,8 +14,8 @@ const awardItems: AwardItem[] = [
   { name: "일반검진", grade: "최우수", emoji: "🥇", isGold: true },
   { name: "대장암검진", grade: "최우수", emoji: "🥇", isGold: true },
   { name: "간암검진", grade: "최우수", emoji: "🥇", isGold: true },
-  { name: "위암검진", grade: "우수", emoji: "🥈", isGold: false },
-  { name: "유방암검진", grade: "우수", emoji: "🥈", isGold: false },
+  { name: "위암검진", grade: "우수", emoji: "🥇", isGold: true },
+  { name: "유방암검진", grade: "우수", emoji: "🥇", isGold: true },
 ];
 
 /* ━━━ Particle system ━━━ */
@@ -151,7 +151,7 @@ function TiltCard({
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative rounded-[20px] p-8 text-center cursor-pointer"
+        className="relative rounded-[16px] md:rounded-[20px] p-5 md:p-8 text-center cursor-pointer"
         style={{
           background: "rgba(255,255,255,0.06)",
           border: item.isGold
@@ -163,11 +163,11 @@ function TiltCard({
         }}
       >
         {/* Emoji */}
-        <div className="text-[48px] mb-5 leading-none">{item.emoji}</div>
+        <div className="text-[36px] md:text-[48px] mb-3 md:mb-5 leading-none">{item.emoji}</div>
 
         {/* Name */}
         <div
-          className="text-[16px] font-semibold text-white/90 mb-5 tracking-tight"
+          className="text-[13px] md:text-[16px] font-semibold text-white/90 mb-3 md:mb-5 tracking-tight"
           style={{ fontFamily: "var(--font-noto-sans-kr)" }}
         >
           {item.name}
@@ -191,7 +191,7 @@ function TiltCard({
                 animation: "award-shimmer 2.5s ease-in-out infinite",
               }}
             />
-            <span className="relative z-10">최우수</span>
+            <span className="relative z-10">{item.grade}</span>
           </div>
         ) : (
           <div
@@ -201,7 +201,7 @@ function TiltCard({
               boxShadow: "0 4px 16px rgba(192,192,192,0.2)",
             }}
           >
-            우수
+            {item.grade}
           </div>
         )}
       </div>
@@ -242,7 +242,7 @@ export default function AwardSection() {
     <section
       ref={sectionRef}
       id="award"
-      className="relative py-[120px] px-6 lg:px-12 overflow-hidden"
+      className="relative py-14 md:py-[120px] px-5 lg:px-12 overflow-hidden"
       style={{ background: "#0a1628" }}
     >
       {/* ── BG Layer 2: radial glows ── */}
@@ -317,7 +317,7 @@ export default function AwardSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5 mb-[72px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 lg:gap-5 mb-10 md:mb-[72px]">
           {awardItems.map((item, i) => (
             <TiltCard key={item.name} item={item} index={i} visible={visible} />
           ))}

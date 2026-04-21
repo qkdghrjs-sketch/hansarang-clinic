@@ -179,13 +179,13 @@ export default function DoctorsSection() {
                 onClick={() => handleTab(i)}
                 className="transition-all duration-200"
                 style={{
-                  display: "flex", alignItems: "center", gap: 10,
-                  padding: "10px 24px",
+                  display: "flex", alignItems: "center", gap: 8,
+                  padding: "9px 18px",
                   borderRadius: 100,
                   border: isActive ? "1.5px solid transparent" : "1.5px solid #dceef8",
                   background: isActive ? "linear-gradient(135deg, #1a9de0, #0d8fcc)" : "white",
                   color: isActive ? "white" : "#4a7a90",
-                  fontSize: 15,
+                  fontSize: 14,
                   fontWeight: isActive ? 700 : 500,
                   cursor: "pointer",
                   boxShadow: isActive ? "0 4px 16px rgba(56,178,240,0.35)" : "none",
@@ -318,7 +318,7 @@ export default function DoctorsSection() {
               <div
                 style={{
                   fontFamily: "var(--font-noto-serif-kr)",
-                  fontSize: "clamp(28px, 3vw, 38px)",
+                  fontSize: "clamp(24px, 3vw, 38px)",
                   fontWeight: 700, color: "#0f2a3a",
                   letterSpacing: "-1px", marginBottom: 6,
                 }}

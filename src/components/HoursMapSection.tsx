@@ -151,7 +151,7 @@ export default function HoursMapSection() {
                   key={h.dayEn}
                   className="text-center relative"
                   style={{
-                    padding: "24px 8px",
+                    padding: "16px 6px",
                     borderRight: i < 6 ? "1px solid #f0f7fc" : "none",
                     background: isToday
                       ? "linear-gradient(180deg, rgba(56,178,240,0.06), rgba(56,178,240,0.02))"
@@ -320,7 +320,7 @@ export default function HoursMapSection() {
           }}
         >
           {/* Map - full width */}
-          <div className="w-full overflow-hidden h-[240px] md:h-[400px]" style={{ borderRadius: 16 }}>
+          <div className="w-full overflow-hidden h-[220px] md:h-[380px]" style={{ borderRadius: 16 }}>
             <iframe
               src="/kakaomap.html"
               className="border-0"

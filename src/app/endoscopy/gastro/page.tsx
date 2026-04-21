@@ -52,7 +52,6 @@ export default function GastroPage() {
   const s4 = useReveal();
   const s5 = useReveal();
   const s6 = useReveal();
-  const s7 = useReveal();
   const s8 = useReveal();
 
   return (
@@ -345,96 +344,6 @@ export default function GastroPage() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ━━━ S7: AI 내시경 ━━━ */}
-      <section style={{ background: "#f8fcff" }} ref={s7.ref}>
-        <div className="max-w-[1280px] mx-auto px-5 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80 }}>
-          {/* AI 히어로 배너 */}
-          <div
-            className="text-center overflow-hidden relative"
-            style={{
-              background: "linear-gradient(135deg, #1e2a5e, #2f6bba)",
-              borderRadius: 20, padding: "48px 28px", marginBottom: 32,
-              opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
-            }}
-          >
-            <div style={{ position: "absolute", top: -40, right: -40, width: 200, height: 200, background: "rgba(255,255,255,0.04)", borderRadius: "50%" }} />
-            <h3 className="font-bold text-white relative z-10" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(24px, 3vw, 32px)", lineHeight: 1.4, marginBottom: 14 }}>
-              <span style={{ color: "#ffd84d" }}>AI</span>와 <span style={{ color: "#ffd84d" }}>전문의</span>가 함께 봅니다
-              <br />
-              단 하나의 병변도 놓치지 않도록
-            </h3>
-            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.8)", lineHeight: 1.85, position: "relative", zIndex: 1 }}>
-              내과 전문의의 숙련된 노하우에 AI의 정밀함을 더해
-              <br />
-              더 꼼꼼한 내시경 검사를 제공합니다.
-            </p>
-          </div>
-
-          {/* AI 특장점 3카드 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            {[
-              { icon: "🤖", bg: "#e8f0fe", title: "이중 판독", desc: "전문의가 한 번, AI가 또 한 번 확인하여 진단 정확도를 높입니다." },
-              { icon: "📊", bg: "#eef4fb", title: "데이터 기반 정밀 진단", desc: "수만 건의 학습 데이터를 기반으로 미세 병변을 실시간 감지합니다." },
-              { icon: "🛡️", bg: "#e8f5e9", title: "실시간 보조 판독", desc: "검사 중 AI가 실시간으로 분석하여 의사의 진단을 보조합니다." },
-            ].map((card, i) => (
-              <div
-                key={card.title}
-                className="group bg-white text-center transition-all duration-300 hover:-translate-y-1"
-                style={{
-                  border: "1.5px solid #dceef8", borderRadius: 20, padding: "32px 24px",
-                  opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)",
-                  transition: `opacity 0.5s ease ${0.1 + i * 0.08}s, transform 0.5s ease ${0.1 + i * 0.08}s, box-shadow 0.3s ease`,
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 12px 40px rgba(56,178,240,0.12)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "none"; }}
-              >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center text-[28px] mx-auto mb-4" style={{ background: card.bg }}>
-                  {card.icon}
-                </div>
-                <div style={{ fontSize: 16, fontWeight: 700, color: "#0f2a3a", marginBottom: 8 }}>{card.title}</div>
-                <p style={{ fontSize: 13.5, color: "#4a7a90", lineHeight: 1.7, wordBreak: "keep-all" }}>{card.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* AI 전후 비교 */}
-          <div
-            className="overflow-hidden mx-auto"
-            style={{
-              background: "linear-gradient(135deg, #1e2a3e, #0f2a3a)", borderRadius: 20,
-              padding: "32px 28px",
-              maxWidth: 720,
-              opacity: s7.v ? 1 : 0, transform: s7.v ? "translateY(0)" : "translateY(30px)",
-              transition: "opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s",
-            }}
-          >
-            <div className="text-center mb-5">
-              <span style={{ fontSize: 14, fontWeight: 700, color: "white" }}>AI 사용 전</span>
-              <span style={{ color: "rgba(255,255,255,0.3)", margin: "0 10px" }}>→</span>
-              <span style={{ fontSize: 14, fontWeight: 700, color: "#ffd84d" }}>AI 사용 후</span>
-            </div>
-            <div className="grid grid-cols-4 gap-2">
-              {[
-                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5f2cf402993d3.png", label: "" },
-                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/2121bbf1517bb.png", label: "" },
-                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a5262feaebc9e.png", label: "AI 감지" },
-                { src: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/ab63fc9af9913.png", label: "AI 감지" },
-              ].map((item, i) => (
-                <div key={i} className="relative rounded-lg overflow-hidden" style={{ aspectRatio: "1", border: item.label ? "2px solid #ffd84d" : "2px solid rgba(255,255,255,0.1)" }}>
-                  <Image src={item.src} alt={`AI 내시경 ${i + 1}`} fill unoptimized className="object-cover" />
-                  {item.label && (
-                    <div className="absolute bottom-1 right-1" style={{ background: "#ffd84d", color: "#1e2a3e", fontSize: 10, fontWeight: 700, padding: "2px 7px", borderRadius: 8 }}>
-                      {item.label}
-                    </div>
-                  )}
-                </div>
-              ))}
             </div>
           </div>
         </div>
