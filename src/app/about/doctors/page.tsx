@@ -435,25 +435,10 @@ export default function DoctorsPage() {
 
                 {/* 예약 버튼 */}
                 <div style={{ marginTop: 32 }}>
-                  {/* 모바일: 전화 연결 */}
+                  {/* 전화 예약 */}
                   <a
                     href="tel:031-912-8720"
-                    className="no-underline transition-all hover:-translate-y-[2px] lg:hidden inline-block"
-                    style={{
-                      background: "#1a9de0", color: "white",
-                      borderRadius: 10, padding: "13px 28px",
-                      fontSize: 14, fontWeight: 700,
-                      boxShadow: "0 4px 16px rgba(56,178,240,0.3)",
-                    }}
-                  >
-                    📞 전화 예약
-                  </a>
-                  {/* PC: 네이버 예약 */}
-                  <a
-                    href="https://naver.me/FvEgeFyj"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="no-underline transition-all hover:-translate-y-[2px] hidden lg:inline-block"
+                    className="no-underline transition-all hover:-translate-y-[2px] inline-block"
                     style={{
                       background: "#1a9de0", color: "white",
                       borderRadius: 10, padding: "13px 28px",

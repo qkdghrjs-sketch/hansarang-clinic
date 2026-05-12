@@ -381,10 +381,10 @@ export default function DoctorsSection() {
                 >
                   의료진 전체보기
                 </Link>
-                {/* 모바일: 전화 / PC: 네이버 예약 */}
+                {/* 전화 예약 */}
                 <a
                   href="tel:031-912-8720"
-                  className="no-underline transition-all hover:-translate-y-[2px] lg:hidden inline-flex items-center gap-2"
+                  className="no-underline transition-all hover:-translate-y-[2px] inline-flex items-center gap-2"
                   style={{
                     background: "white", color: "#1a9de0",
                     border: "1.5px solid #dceef8",
@@ -393,22 +393,6 @@ export default function DoctorsSection() {
                   }}
                 >
                   📞 전화 예약
-                </a>
-                <a
-                  href="https://naver.me/FvEgeFyj"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="no-underline transition-all hover:-translate-y-[2px] hidden lg:inline-flex items-center gap-2"
-                  style={{
-                    background: "white", color: "#1a9de0",
-                    border: "1.5px solid #dceef8",
-                    borderRadius: 10, padding: "13px 28px",
-                    fontSize: 14, fontWeight: 600,
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#38b2f0"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#dceef8"; }}
-                >
-                  📞 진료 예약
                 </a>
               </div>
             </div>

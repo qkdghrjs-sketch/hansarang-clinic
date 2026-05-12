@@ -92,9 +92,6 @@ export default function NoticePage() {
             <a href="tel:031-916-8720" className="no-underline transition-all hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
               031-916-8720 종합검진실
             </a>
-            <a href="https://naver.me/FvEgeFyj" target="_blank" rel="noopener noreferrer" className="no-underline transition-all hover:-translate-y-[2px]" style={{ background: "rgba(255,255,255,0.15)", color: "white", border: "1.5px solid rgba(255,255,255,0.35)", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 600, backdropFilter: "blur(8px)" }}>
-              네이버 예약하기 →
-            </a>
           </div>
         </div>
       </section>

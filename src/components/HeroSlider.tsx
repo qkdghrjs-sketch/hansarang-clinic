@@ -70,7 +70,7 @@ export default function HeroSlider() {
             href="tel:031-912-8720"
             className="bg-white text-sky-deep px-[38px] py-[14px] md:py-[15px] rounded-2xl text-[15px] font-bold no-underline shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-[2px] hover:shadow-[0_12px_36px_rgba(0,0,0,0.28)] text-center"
           >
-            🩺 진료 예약하기
+            🩺 검진 예약하기
           </a>
           <a
             href="#checkup"

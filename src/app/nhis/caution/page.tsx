@@ -162,10 +162,6 @@ export default function CautionPage() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>궁금하신 점이 있으시면 편하게 연락해 주세요</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="tel:031-917-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>031-917-9008 국가건강검진</a>
-            <a href="https://naver.me/FvEgeFyj" target="_blank" rel="noopener noreferrer" className="no-underline transition-all duration-300" style={{ background: "transparent", color: "white", border: "2px solid rgba(255,255,255,0.5)", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 600 }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "white"; e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.5)"; e.currentTarget.style.background = "transparent"; }}
-            >네이버 예약하기 →</a>
           </div>
         </div>
       </section>

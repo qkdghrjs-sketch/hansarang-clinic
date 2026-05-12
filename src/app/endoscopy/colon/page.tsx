@@ -345,15 +345,6 @@ export default function ColonPage() {
             >
               031-912-8720 전화예약
             </a>
-            <a
-              href="https://naver.me/FvEgeFyj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline transition-all hover:-translate-y-[2px]"
-              style={{ background: "rgba(255,255,255,0.15)", color: "white", padding: "16px 36px", borderRadius: 14, fontSize: 15, fontWeight: 600, border: "1.5px solid rgba(255,255,255,0.35)", backdropFilter: "blur(8px)" }}
-            >
-              네이버 예약하기 →
-            </a>
           </div>
         </div>
       </section>

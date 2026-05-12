@@ -365,9 +365,6 @@ export default function GastroPage() {
             <a href="tel:031-912-8720" className="no-underline transition-all hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", padding: "16px 36px", borderRadius: 14, fontSize: 15, fontWeight: 700, boxShadow: "0 8px 28px rgba(0,0,0,0.15)" }}>
               📞 031-912-8720 전화예약
             </a>
-            <a href="https://naver.me/FvEgeFyj" target="_blank" rel="noopener noreferrer" className="no-underline transition-all hover:-translate-y-[2px]" style={{ background: "rgba(255,255,255,0.15)", color: "white", padding: "16px 36px", borderRadius: 14, fontSize: 15, fontWeight: 600, border: "1.5px solid rgba(255,255,255,0.35)", backdropFilter: "blur(8px)" }}>
-              네이버 예약하기 →
-            </a>
           </div>
         </div>
       </section>

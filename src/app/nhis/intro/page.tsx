@@ -255,15 +255,6 @@ export default function NhisIntroPage() {
             >
               031-917-9008 국가건강검진
             </a>
-            <a
-              href="https://naver.me/FvEgeFyj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline transition-all duration-300 hover:-translate-y-[2px]"
-              style={{ background: "rgba(255,255,255,0.15)", color: "white", border: "1.5px solid rgba(255,255,255,0.35)", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 600, backdropFilter: "blur(8px)" }}
-            >
-              네이버 예약하기 →
-            </a>
           </div>
         </div>
       </section>
