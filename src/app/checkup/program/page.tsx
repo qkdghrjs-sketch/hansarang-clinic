@@ -100,7 +100,30 @@ export default function ProgramPage() {
             </p>
           </div>
 
-          <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+          {/* 모바일 카드 뷰 */}
+          <div className="md:hidden space-y-4">
+            {PROGRAMS.map((p) => (
+              <div key={p.name} style={{ background: "white", border: "1.5px solid #dceef8", borderRadius: 16, overflow: "hidden" }}>
+                <div style={{ background: "#0f2a3a", padding: "14px 18px" }}>
+                  <div style={{ color: "white", fontWeight: 700, fontSize: 15 }}>{p.name}</div>
+                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 12, marginTop: 4, lineHeight: 1.5 }}>{p.sub}</div>
+                </div>
+                <div>
+                  {p.items.map((item, j) => (
+                    <div key={j} style={{ padding: "9px 16px", borderBottom: j < p.items.length - 1 ? "1px solid #f0f7fc" : "none", fontSize: 13.5, color: "#4a7a90", background: j % 2 === 0 ? "white" : "#fafcff" }}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <div style={{ background: "#f8fcff", padding: "10px 16px", borderTop: "1px solid #dceef8", fontSize: 13, color: "#82aabf", textAlign: "center" }}>
+                  검진비용: 문의
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* PC 테이블 뷰 */}
+          <div className="hidden md:block overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
             <table className="w-full" style={{ borderCollapse: "separate", borderSpacing: 0, borderRadius: 16, overflow: "hidden", boxShadow: "0 4px 24px rgba(56,178,240,0.08)", minWidth: 700 }}>
               <thead>
                 <tr>

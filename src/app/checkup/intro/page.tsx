@@ -150,9 +150,9 @@ export default function CheckupIntroPage() {
             <button
               key={t.id}
               onClick={() => scrollTo(t.id)}
-              className="whitespace-nowrap cursor-pointer transition-all duration-200"
+              className="whitespace-nowrap cursor-pointer transition-all duration-200 px-4 py-3 md:px-9 md:py-[18px]"
               style={{
-                padding: "18px 36px", fontSize: 15,
+                fontSize: 14,
                 fontWeight: activeTab === t.id ? 700 : 500,
                 color: activeTab === t.id ? "#1a9de0" : "#4a7a90",
                 borderBottom: `3px solid ${activeTab === t.id ? "#1a9de0" : "transparent"}`,
@@ -277,7 +277,7 @@ export default function CheckupIntroPage() {
             ].map((stat, i) => (
               <div key={stat.label} className="contents">
                 {i > 0 && <div className="hidden md:block flex-shrink-0" style={{ width: 1, height: 48, background: "rgba(255,255,255,0.15)" }} />}
-                <div className="flex flex-col items-center justify-center text-center" style={{ flex: 1, minWidth: 130, padding: "8px 20px" }}>
+                <div className="flex flex-col items-center justify-center text-center" style={{ flex: 1, minWidth: 0, padding: "8px 12px" }}>
                   <div className="font-extrabold leading-none tracking-tight" style={{ fontFamily: "var(--font-outfit)", fontSize: "clamp(28px, 3.5vw, 40px)", color: "#7dd3f8" }}>
                     {stat.value}
                   </div>
@@ -298,7 +298,30 @@ export default function CheckupIntroPage() {
             종합검진프로그램
           </h2>
 
-          <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+          {/* 모바일 카드 뷰 */}
+          <div className="md:hidden space-y-4">
+            {PROGRAMS.map((p) => (
+              <div key={p.name} style={{ background: "white", border: "1.5px solid #dceef8", borderRadius: 16, overflow: "hidden" }}>
+                <div style={{ background: "#0f2a3a", padding: "14px 18px" }}>
+                  <div style={{ color: "white", fontWeight: 700, fontSize: 15 }}>{p.name}</div>
+                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 12, marginTop: 4, lineHeight: 1.5 }}>{p.sub}</div>
+                </div>
+                <div>
+                  {p.items.map((item, j) => (
+                    <div key={j} style={{ padding: "9px 16px", borderBottom: j < p.items.length - 1 ? "1px solid #f0f7fc" : "none", fontSize: 13.5, color: "#4a7a90", background: j % 2 === 0 ? "white" : "#fafcff" }}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <div style={{ background: "#f8fcff", padding: "10px 16px", borderTop: "1px solid #dceef8", fontSize: 13, color: "#82aabf", textAlign: "center" }}>
+                  검진비용: 문의
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* PC 테이블 뷰 */}
+          <div className="hidden md:block overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
             <table className="w-full" style={{ borderCollapse: "separate", borderSpacing: 0, borderRadius: 16, overflow: "hidden", boxShadow: "0 4px 24px rgba(56,178,240,0.08)", minWidth: 700 }}>
               <thead>
                 <tr>
@@ -351,7 +374,18 @@ export default function CheckupIntroPage() {
             채용검진프로그램 검사안내
           </h3>
 
-          <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+          {/* 모바일 카드 뷰 */}
+          <div className="md:hidden" style={{ border: "1.5px solid #dceef8", borderRadius: 16, overflow: "hidden" }}>
+            {EMPLOY_ROWS.map((r, i) => (
+              <div key={i} style={{ padding: "14px 16px", borderBottom: i < EMPLOY_ROWS.length - 1 ? "1px solid #dceef8" : "none", background: i % 2 === 0 ? "white" : "#f8fcff" }}>
+                <div style={{ fontWeight: 700, color: "#0f2a3a", fontSize: 13, marginBottom: 5 }}>{r.label}</div>
+                <div style={{ color: "#4a7a90", fontSize: 13.5, lineHeight: 1.75, whiteSpace: "pre-line" }}>{r.value}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* PC 테이블 뷰 */}
+          <div className="hidden md:block overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
             <table className="w-full" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <tbody style={{ borderTop: "2px solid #0f2a3a" }}>
                 {EMPLOY_ROWS.map((r, i) => (
@@ -443,14 +477,15 @@ function CautionCard({ title, visible, delay, children }: { title: string; visib
   return (
     <div
       style={{
-        background: "white", border: "1px solid #dceef8", borderRadius: 16, padding: "36px 40px",
+        background: "white", border: "1px solid #dceef8", borderRadius: 16,
         transition: "all 0.3s", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)",
         transitionDelay: visible ? `${delay}s` : "0s",
       }}
+      className="p-5 md:px-10 md:py-9"
       onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 16px 48px rgba(56,178,240,0.12)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
     >
-      <div style={{ fontSize: 20, fontWeight: 700, color: "#1a9de0", marginBottom: 16, wordBreak: "keep-all" }}>{title}</div>
+      <div style={{ fontSize: 18, fontWeight: 700, color: "#1a9de0", marginBottom: 14, wordBreak: "keep-all" }}>{title}</div>
       {children}
     </div>
   );

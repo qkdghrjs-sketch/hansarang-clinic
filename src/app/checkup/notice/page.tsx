@@ -108,14 +108,15 @@ function Card({ title, v, delay, children }: { title: string; v: boolean; delay:
   return (
     <div
       style={{
-        background: "white", border: "1px solid #dceef8", borderRadius: 16, padding: "36px 40px",
+        background: "white", border: "1px solid #dceef8", borderRadius: 16,
         transition: "all 0.3s", opacity: v ? 1 : 0, transform: v ? "translateY(0)" : "translateY(40px)",
         transitionDelay: v ? `${delay}s` : "0s",
       }}
+      className="p-5 md:px-10 md:py-9"
       onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 16px 48px rgba(56,178,240,0.12)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
     >
-      <div style={{ fontSize: 20, fontWeight: 700, color: "#1a9de0", marginBottom: 16, wordBreak: "keep-all" }}>{title}</div>
+      <div style={{ fontSize: 18, fontWeight: 700, color: "#1a9de0", marginBottom: 14, wordBreak: "keep-all" }}>{title}</div>
       {children}
     </div>
   );

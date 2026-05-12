@@ -81,7 +81,18 @@ export default function EmploymentPage() {
             채용검진프로그램 검사안내
           </h3>
 
-          <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+          {/* 모바일 카드 뷰 */}
+          <div className="md:hidden" style={{ border: "1.5px solid #dceef8", borderRadius: 16, overflow: "hidden" }}>
+            {EMPLOY_ROWS.map((r, i) => (
+              <div key={i} style={{ padding: "14px 16px", borderBottom: i < EMPLOY_ROWS.length - 1 ? "1px solid #dceef8" : "none", background: i % 2 === 0 ? "white" : "#f8fcff" }}>
+                <div style={{ fontWeight: 700, color: "#0f2a3a", fontSize: 13, marginBottom: 5 }}>{r.label}</div>
+                <div style={{ color: "#4a7a90", fontSize: 13.5, lineHeight: 1.75, whiteSpace: "pre-line" }}>{r.value}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* PC 테이블 뷰 */}
+          <div className="hidden md:block overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
             <table className="w-full" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <tbody style={{ borderTop: "2px solid #0f2a3a" }}>
                 {EMPLOY_ROWS.map((r, i) => (
