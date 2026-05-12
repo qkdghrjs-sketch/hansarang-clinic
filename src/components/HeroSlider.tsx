@@ -73,7 +73,7 @@ export default function HeroSlider() {
             🩺 검진 예약하기
           </a>
           <a
-            href="#checkup"
+            href="/checkup/intro"
             className="bg-white/12 text-white px-8 py-[14px] md:py-[15px] rounded-2xl text-[15px] font-medium no-underline border-[1.5px] border-white/35 backdrop-blur-[8px] transition-all hover:bg-white/22 text-center"
           >
             건강검진 안내 →
