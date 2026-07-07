@@ -170,12 +170,20 @@ export default function NhisGeneralPage() {
               <BL items={["진찰 및 상담", "신장 및 체중, 비만도", "시력, 청력", "혈압측정"]} />
               <BL items={["허리둘레", "흉부방사선 촬영", "요검사(요단백)", "혈액검사(빈혈, 당뇨, 간기능, 신장기능, 4년에 한번 고지혈증)"]} />
             </div>
+            <div style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: 12, padding: "16px 18px", marginTop: 18 }}>
+              <BL items={[
+                "간염검사 : 만 40세 해당되는 자에 한하여 B형 간염표면항원, 항체 검사 실시",
+                "골밀도 검사 : 만 54, 60, 66세의 여성에게만 실시",
+                "C형간염 검사 : 만 56세 해당되는 자에 한하여 C형간염 항체 검사 실시",
+                "폐기능 검사 : 만 66세",
+              ]} />
+            </div>
           </DetailRow>
 
           {/* Row 4 */}
           <DetailRow title="일반 건강검진 결과 통보" org="(검진기관)" visible={s3.v} delay={0.3}>
             <BL items={[
-              "일반 건강검진 후 15일 이내 검진기관에서 주소지로 발송",
+              "일반 건강검진 후 3~4주 이내 검진기관에서 일반우편으로 발송됩니다.",
               "일반 검진 결과 질환의심자에게 확진 실시",
             ]} />
             <p style={{ marginTop: 12 }}><Accent>* 직장가입자의 경우 기입하신 주소로 통보됩니다.</Accent></p>
@@ -185,7 +193,7 @@ export default function NhisGeneralPage() {
           <DetailRow title="확진 검사" org="(검진기관)" visible={s3.v} delay={0.4}>
             <BL items={[
               "일반 건강검진 결과 통보서 확인",
-              "확진 건강검진은 일반 건강검진 결과 고혈압, 당뇨 의심환자에 한해서 받을 수 있습니다",
+              "확진 건강검진은 일반 건강검진 결과 고혈압, 당뇨병, 이상지질혈증(고지혈증) 의심환자에 한해서 받을 수 있습니다.",
               "신분증과 통보서를 필히 지참",
             ]} />
             <SubTitle>공통검진</SubTitle>
@@ -194,6 +202,8 @@ export default function NhisGeneralPage() {
             <BL items={["일반 건강검진 질환의심자 중 희망자 : 혈압 측정"]} />
             <SubTitle>당뇨병</SubTitle>
             <BL items={["일반 검진결과 질환의심자 중 희망자 : 공복혈당 측정"]} />
+            <SubTitle>이상지질혈증(고지혈증)</SubTitle>
+            <BL items={["일반 검진결과 질환의심자 중 희망자 : 공복혈액 측정"]} />
           </DetailRow>
 
         </div>
@@ -211,8 +221,8 @@ export default function NhisGeneralPage() {
           </h3>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>지금 바로 한사랑속편한내과에서 편안하게 검진받으세요</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:031-917-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
-              031-917-9008 국가건강검진
+            <a href="tel:031-924-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
+              031-924-9008 국가건강검진
             </a>
           </div>
         </div>

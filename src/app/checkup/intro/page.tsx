@@ -62,7 +62,7 @@ const PROGRAMS = [
       "혈액종합검사(혈액 및 소변 80여종 검사)",
       "종양(암)표지자: 간, 대장, 췌장/담도, 전립선(남)/난소(여)",
       "A,B,C 형 간염검사", "종합판정", "영양상담",
-      "심전도검사", "흉부 X-RAY", "폐기능검사",
+      "심전도검사", "안저검사", "흉부 X-RAY", "폐기능검사",
       "복부초음파", "갑상선초음파", "유방초음파",
       "수면위내시경",
     ],
@@ -75,11 +75,11 @@ const PROGRAMS = [
       "혈액종합검사(혈액 및 소변 80여종 검사)",
       "종양(암)표지자: 간, 대장, 췌장/담도, 전립선(남)/난소(여)",
       "A,B,C 형 간염검사", "종합판정", "영양상담",
-      "심전도검사", "안저촬영", "흉부 X-RAY",
+      "심전도검사", "안저촬영", "흉부 X-RAY", "복부 X-RAY",
       "골밀도검사", "폐기능검사", "복부초음파",
       "갑상선초음파", "전립선 초음파", "수면위내시경",
       "수면대장내시경", "자궁경부암검사(여성)",
-      "유방초음파, 유방촬영", "경동맥초음파, 동맥 경화",
+      "유방초음파, 유방촬영", "경동맥초음파",
     ],
   },
 ];
@@ -457,8 +457,8 @@ export default function CheckupIntroPage() {
           </h3>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>전문 상담원이 친절하게 안내해 드립니다</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:031-912-8720" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
-              📞 031-912-8720 전화예약
+            <a href="tel:031-916-8720" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>
+              📞 031-916-8720 종합검진실
             </a>
           </div>
         </div>

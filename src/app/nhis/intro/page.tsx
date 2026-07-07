@@ -249,11 +249,11 @@ export default function NhisIntroPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:031-917-9008"
+              href="tel:031-924-9008"
               className="no-underline transition-all duration-300 hover:-translate-y-[2px]"
               style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}
             >
-              031-917-9008 국가건강검진
+              031-924-9008 국가건강검진
             </a>
           </div>
         </div>

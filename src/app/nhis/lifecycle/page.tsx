@@ -58,11 +58,12 @@ function BorderBox({ children }: { children: React.ReactNode }) {
 
 const STEPS = [
   { num: "Step 1", name: "대상자 선정", org: "(국민건강보험공단)" },
-  { num: "Step 2", name: "건강검진표\n발송 및 수령", org: "(국민건강보험공단)" },
-  { num: "Step 3", name: "위암검진", org: "(검진기관)" },
-  { num: "Step 4", name: "1차 건강검진\n결과 통보", org: "(검진기관)" },
-  { num: "Step 5", name: "2차 건강진단", org: "(검진기관)" },
-  { num: "Step 6", name: "2차 건강진단\n결과 통보", org: "(검진기관)" },
+  { num: "Step 2", name: "건강검진표
+발송 및 수령", org: "(국민건강보험공단)" },
+  { num: "Step 3", name: "검진항목", org: "(검진기관)" },
+  { num: "Step 4", name: "검진항목
+상세안내", org: "(검진기관)" },
+  { num: "Step 5", name: "결과 통보", org: "(검진기관)" },
 ];
 
 const HABIT_ROWS = [
@@ -147,69 +148,52 @@ export default function LifecyclePage() {
           </DetailRow>
 
           {/* Row 3 */}
-          <DetailRow title="위암검진" org="(검진기관)" visible={s3.v} delay={0.2}>
+          <DetailRow title="검진항목" org="(검진기관)" visible={s3.v} delay={0.2}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0">
-              <BL items={["신장 및 체중", "허리둘레", "혈압측정", "시력, 청력 진찰 및 상담", "흉부방사선 촬영"]} />
-              <BL items={["암검진", "골밀도검사 (만 66세 여성)", "노인신체기능검사 (만 66세)", "낙상검사 (하지기능, 평형성)", "요검사"]} />
+              <BL items={["신장 및 체중", "허리둘레", "시력, 청력 진찰 및 상담"]} />
+              <BL items={["암검진", "골밀도검사 (만 66세 여성)", "낙상검사 (하지기능, 평형성)", "인지기능장애 검사"]} />
             </div>
             <InfoBox>
-              간염검사 : 만 40세 해당되는 자에 한하여 B형 간연표면항원, 항체 검사 실시<br />
-              골밀도 검사 : 만 66세의 여성에게만 실시<br />
-              인지기능장애검사(치매)<br />
-              * 1차 치매선별검사는 만 66세, 70세, 74세에 해당되는 자에 한정하여 KDSQ-P 선별검사 및 상담<br />
-              * 건강검진 공동 문진표(실시기준 별지 제 1호 서식) 7번 문항 (인지기능 답변내용에 따라 검사)<br />
-              * 2차 치매선별검사는 1차 치매선별검사에 추가적인 설문과 상담필요자(4~10점)에 해당하는 자에게 실시
+              골밀도 검사 : 만 66세 여성<br />
+              인지기능장애검사 : 만 66세 이상 2년마다<br />
+              생활습관평가 : 생활습관 관련 흡연, 음주, 운동, 영양, 비만 건강위험요인을 평가하고 평가 결과에 따라 생활 습관 개선을 위한 상담 및 처방 등을 실시합니다.<br />
+              정신건강검사 : 우울증에 대한 선별검사를 실시합니다.
             </InfoBox>
           </DetailRow>
 
           {/* Row 4 */}
-          <DetailRow title="1차 건강검진 결과 통보" org="(검진기관)" visible={s3.v} delay={0.3}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0">
-              <BL items={["1차 건강진단", "암검진"]} />
-              <BL items={["건강위험평가 및 정신건강검진", "노인기능평가(만 66세)"]} />
-            </div>
-          </DetailRow>
-
-          {/* Row 5 */}
-          <DetailRow title="2차 건강진단" org="(검진기관)" visible={s3.v} delay={0.4}>
-            <p style={{ ...tx, marginBottom: 16 }}>만 40세 이상 남녀 중 아래 대상자는 간 초음파검사와 혈액검사(혈청알파태아단백검사)를 받습니다.</p>
-            <BL items={[
-              "1차 건강진단 결과 통보서 확인",
-              "2차 건강진단은 1차 진단 결과와 관계없이 대상자 전체(정상포함)가 2차 건강진단을 받을 수 있습니다.",
-              "1차 건강진단 결과 및 HRA 상담",
-              "생활습관검사 : 생활 습관 평가 및 처방 도구",
-            ]} />
-
-            {/* Habit table */}
-            <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch", marginTop: 20 }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #dceef8", borderRadius: 12, overflow: "hidden", minWidth: 400 }}>
+          <DetailRow title="검진항목 상세안내" org="(검진기관)" visible={s3.v} delay={0.3}>
+            <div className="overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #dceef8", borderRadius: 12, overflow: "hidden", minWidth: 520 }}>
+                <thead>
+                  <tr>
+                    <th style={{ background: "#f0f9ff", color: "#0f2a3a", padding: "14px 16px", borderBottom: "1px solid #dceef8", fontSize: 13 }}>구분</th>
+                    <th style={{ background: "#f0f9ff", color: "#0f2a3a", padding: "14px 16px", borderBottom: "1px solid #dceef8", fontSize: 13 }}>검진항목</th>
+                    <th style={{ background: "#f0f9ff", color: "#0f2a3a", padding: "14px 16px", borderBottom: "1px solid #dceef8", fontSize: 13 }}>실시시기</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  {HABIT_ROWS.map((r, i) => (
-                    <tr key={i} style={{ borderBottom: i < HABIT_ROWS.length - 1 ? "1px solid #dceef8" : "none" }}>
-                      <td style={{ width: 60, background: "#f0f9ff", fontWeight: 700, color: "#0f2a3a", fontSize: 13, textAlign: "center", padding: "14px 8px", borderRight: "1px solid #dceef8", letterSpacing: 2 }}>{r.cat}</td>
-                      <td style={{ padding: "14px 20px", fontSize: 13.5, color: "#4a7a90", lineHeight: 1.6, wordBreak: "keep-all" }}>{r.val}</td>
+                  {[
+                    ["의료급여 생애전환기 검진", "골밀도검사", "만 66세 여성"],
+                    ["의료급여 생애전환기 검진", "인지기능장애", "만 66세 이상 2년마다"],
+                    ["의료급여 생애전환기 검진", "정신건강검사(우울증)", "만 70세"],
+                    ["의료급여 생애전환기 검진", "생활습관평가", "만 70세"],
+                    ["의료급여 생애전환기 검진", "노인신체기능검사", "만 66, 70, 80세"],
+                  ].map((row, i) => (
+                    <tr key={i} style={{ borderBottom: i < 4 ? "1px solid #dceef8" : "none" }}>
+                      <td style={{ padding: "13px 16px", color: "#4a7a90", fontSize: 13.5, textAlign: "center" }}>{row[0]}</td>
+                      <td style={{ padding: "13px 16px", color: "#4a7a90", fontSize: 13.5, textAlign: "center", borderLeft: "1px solid #dceef8" }}>{row[1]}</td>
+                      <td style={{ padding: "13px 16px", color: "#4a7a90", fontSize: 13.5, textAlign: "center", borderLeft: "1px solid #dceef8" }}>{row[2]}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-
-            <p style={{ fontSize: 13, color: "#1a9de0", marginTop: 12 }}>* 비흡연자, 비음주자는 평가(흡연, 음주) 비대상임</p>
-
-            <div style={{ fontSize: 16, fontWeight: 700, color: "#0f2a3a", margin: "24px 0 12px" }}>정신건강검사</div>
-            <BL items={[
-              <>우울증 검진 대상자<br /><span style={{ fontSize: 13, color: "#82aabf", paddingLeft: 16, display: "block", marginTop: 4 }}>- 만 40세 : 공통문진표8번 항목의 4개 질문 중 3, 4번에 대한 답변이 1개 이상 해당<br />- 만 66세 : 추가문진표3번 항목의 3개 질문 중 1번 답변이 1개 이상 해당</span></>,
-              <>인공기능장애 선별검사 대상자<br /><span style={{ fontSize: 13, color: "#82aabf", paddingLeft: 16, display: "block", marginTop: 4 }}>- 인지기능에 대한 7번 항목의 5개 질문 중 답변에 대한 합산 점수가 4점 이상인 경우<br />- 고혈압, 당뇨 2차 확진검사</span></>,
-            ]} />
-
-            <BorderBox>
-              1차 생애전환기 건강진단 수검자가 검진기관을 달리하여 2차 검진기관에서 1차 검진결과 및 건강위험평가 결과 상담을 받고자 하는 경우에는 1차 건강진단기관에서 통보 받은 &apos;생애전환기 건강진단 1차 결과 통보서&apos;와 &apos;건강위험평가 결과통보서&apos;를 반드시 지참하여야 하며 1차 건강진단 결과통보서를 분실 또는 수령치 못한 경우에는 1차 검진기관에 재발급을 요청할 수 있습니다.
-            </BorderBox>
           </DetailRow>
 
-          {/* Row 6 */}
-          <DetailRow title="2차 건강진단결과 통보서 작성 및 발송" org="(검진기관)" visible={s3.v} delay={0.5}>
-            <p style={tx}>2차 건강검진 후 15일 이내 검진기관에서 주소지로 발송해 드립니다.</p>
+          {/* Row 5 */}
+          <DetailRow title="결과 통보" org="(검진기관)" visible={s3.v} delay={0.4}>
+            <p style={tx}>건강검진 후 3~4주 이내 검진기관에서 일반우편으로 발송됩니다.</p>
             <p style={{ fontSize: 13, color: "#1a9de0", marginTop: 12 }}>* 직장가입자의 경우 기입하신 주소로 통보됩니다.</p>
           </DetailRow>
 
@@ -223,7 +207,7 @@ export default function LifecyclePage() {
           <h3 className="font-bold text-white" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.5vw,32px)", marginBottom: 12 }}>생애전환기검진 대상자이신가요?</h3>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>만 44세, 만 66세라면 지금 바로 한사랑속편한내과에서 검진받으세요</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:031-917-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>031-917-9008 국가건강검진</a>
+            <a href="tel:031-924-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>031-924-9008 국가건강검진</a>
           </div>
         </div>
       </section>
