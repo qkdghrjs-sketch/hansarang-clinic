@@ -147,7 +147,7 @@ export default function NhisCancerPage() {
             <p style={txt}>만 40세 이상 여성은 <strong style={B}>2년마다 유방촬영검사</strong>를 받습니다.</p>
           </DetailRow>
           <DetailRow title="결과통보" org="(검진기관)" visible={s3.v} delay={0.6}>
-            <p style={txt}>해당 검진기관을 확인한 뒤 사전 예약을 하시고, 암검진표와 신분증을 가지고 검진기관을 방문하여 암검진 실시</p>
+            <p style={txt}>건강검진 후 3~4주 이내 검진기관에서 일반우편으로 발송됩니다.</p>
           </DetailRow>
           <div style={{ borderTop: "1px solid #dceef8" }} />
         </div>
@@ -193,7 +193,7 @@ export default function NhisCancerPage() {
           <h3 className="font-bold text-white" style={{ fontFamily: "var(--font-noto-serif-kr)", fontSize: "clamp(22px,2.5vw,32px)", marginBottom: 12 }}>암검진 대상자이신가요?</h3>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", marginBottom: 36 }}>지금 바로 한사랑속편한내과에서 편안하게 검진받으세요</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:031-917-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>031-917-9008 국가건강검진</a>
+            <a href="tel:031-924-9008" className="no-underline transition-all duration-300 hover:-translate-y-[2px]" style={{ background: "white", color: "#1a9de0", borderRadius: 12, padding: "16px 36px", fontSize: 16, fontWeight: 700, boxShadow: "0 8px 24px rgba(0,0,0,0.15)" }}>031-924-9008 국가건강검진</a>
           </div>
         </div>
       </section>
