@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: "C:/Users/qkdgh/Downloads/한사랑속편한내과_일산_홈페이지",
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "cdn.imweb.me" },
