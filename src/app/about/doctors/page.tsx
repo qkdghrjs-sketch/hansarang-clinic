@@ -101,18 +101,6 @@ const DOCTORS = [
       "한국 초음파학회 정회원",
     ],
   },
-  {
-    name: "현보라",
-    title: "원장 · 가정의학과 전문의",
-    specialty: "가정의학과",
-    hospital: "일산백병원",
-    image: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e6f0f8c1c0baf.png",
-    careers: [
-      "가정의학과 지도 전문의",
-      "일산 백병원 가정의학과",
-      "김포 우리병원 검진센터",
-    ],
-  },
 ];
 
 /* ━━━ Reveal hook ━━━ */
