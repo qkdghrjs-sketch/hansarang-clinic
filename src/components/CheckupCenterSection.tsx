@@ -17,7 +17,7 @@ const cards = [
     tag: "SPECIALIST",
     tagColor: "#0ea5aa",
     title: "특화된 전문의",
-    desc: "8명의 풍부한 경험을 가진 내과전문의들의 노하우로 최상의 검진서비스를 제공해드립니다.",
+    desc: "7명의 풍부한 경험을 가진 내과전문의들의 노하우로 최상의 검진서비스를 제공해드립니다.",
   },
   {
     img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/d6c55128d7c5d.png",

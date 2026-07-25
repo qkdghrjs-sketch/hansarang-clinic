@@ -254,7 +254,7 @@ export default function GreetingPage() {
                   전문의료진
                 </div>
                 <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9 }}>
-                  8명의 대학병원 임상교수 출신의 임상경험이 풍부한 전문의료진으로 구성되어 있어
+                  7명의 대학병원 임상교수 출신의 임상경험이 풍부한 전문의료진으로 구성되어 있어
                   전문적이며 포괄적인 진료가 가능합니다.
                 </p>
               </div>
