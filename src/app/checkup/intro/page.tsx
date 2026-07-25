@@ -33,7 +33,7 @@ const TABS = [
 
 const INTRO_SERVICES = [
   { icon: "⏱️", color: "#1a9de0", title: "당일 결과 확인", desc: "검사 당일 결과를 바로 확인할 수 있어 불안한 기다림이 없습니다." },
-  { icon: "👨‍⚕️", color: "#0ea5aa", title: "8인 전문의 협진", desc: "대학병원 출신 내과전문의들의 풍부한 경험으로 정확하게 진단합니다." },
+  { icon: "👨‍⚕️", color: "#0ea5aa", title: "7인 전문의 협진", desc: "대학병원 출신 내과전문의들의 풍부한 경험으로 정확하게 진단합니다." },
   { icon: "🏨", color: "#6366f1", title: "VIP 전용 검진 공간", desc: "개인 VIP룸과 전담 직원 배치로 대기 없이 편안하게 검진합니다." },
   { icon: "🔬", color: "#f59e0b", title: "대학병원급 최신 장비", desc: "내시경, 초음파, 임상병리 장비를 도입하여 정밀한 진단이 가능합니다." },
   { icon: "📋", color: "#1a9de0", title: "맞춤형 검진 프로그램", desc: "성별, 연령, 가족력에 맞춘 다양한 정밀 검진 프로그램을 운영합니다." },
@@ -198,7 +198,7 @@ export default function CheckupIntroPage() {
               정밀한 건강검진
             </h2>
             <p style={{ fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.8, maxWidth: 520, wordBreak: "keep-all" }}>
-              8인의 전문의와 대학병원급 장비, VIP 전용 공간까지.
+              7인의 전문의와 대학병원급 장비, VIP 전용 공간까지.
               <br />
               한사랑속편한내과에서 경험하세요.
             </p>
@@ -269,7 +269,7 @@ export default function CheckupIntroPage() {
         <div style={{ background: "linear-gradient(135deg, #0f2a3a, #1a3a4a)", padding: "48px 24px" }}>
           <div className="max-w-[1280px] mx-auto flex flex-wrap justify-center items-center">
             {[
-              { value: "8인", label: "전문의 협진" },
+              { value: "7인", label: "전문의 협진" },
               { value: "당일", label: "결과 확인" },
               { value: "VIP", label: "전용 공간" },
               { value: "30년+", label: "진료 경험" },

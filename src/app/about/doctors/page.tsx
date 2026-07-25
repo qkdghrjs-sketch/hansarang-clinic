@@ -190,7 +190,7 @@ export default function DoctorsPage() {
               color: "white", letterSpacing: "-1px", marginBottom: 16,
             }}
           >
-            8인의 전문 의료진
+            7인의 전문 의료진
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.65)", lineHeight: 1.8, wordBreak: "keep-all" }}>
             대학병원 임상교수 출신의 풍부한 경험을 가진 전문의들이

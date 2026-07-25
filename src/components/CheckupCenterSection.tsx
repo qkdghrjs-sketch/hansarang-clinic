@@ -38,7 +38,7 @@ const cards = [
 const stats = [
   { value: "당일", label: "결과 확인" },
   { value: "VIP", label: "전용 공간" },
-  { value: "8인", label: "전문의 진료" },
+  { value: "7인", label: "전문의 진료" },
   { value: "최신", label: "대학병원급 장비" },
 ];
 
@@ -198,7 +198,7 @@ export default function CheckupCenterSection() {
               transition: "opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s",
             }}
           >
-            8인의 전문의와 대학병원급 장비로 최상의 검진 서비스를 제공합니다
+            7인의 전문의와 대학병원급 장비로 최상의 검진 서비스를 제공합니다
           </p>
         </div>
       </div>

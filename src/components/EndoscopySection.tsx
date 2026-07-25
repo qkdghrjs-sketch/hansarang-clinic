@@ -342,7 +342,7 @@ export default function EndoscopySection() {
                   lineHeight: 1.85,
                 }}
               >
-                <span className="font-semibold">8인의 전문의와 충분한 장비가 갖춰진 환경에서,</span>
+                <span className="font-semibold">7인의 전문의와 충분한 장비가 갖춰진 환경에서,</span>
                 <br />
                 <span className="font-normal">여유롭고 꼼꼼한 검사를 약속드립니다.</span>
               </div>

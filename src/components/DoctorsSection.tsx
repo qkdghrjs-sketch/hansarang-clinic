@@ -149,7 +149,7 @@ export default function DoctorsSection() {
             className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.3] tracking-tight mb-4"
             style={{ fontFamily: "var(--font-noto-serif-kr)", color: "#0f2a3a" }}
           >
-            8인의 전문 의료진
+            7인의 전문 의료진
           </h2>
           <p style={{ fontSize: 16, color: "#82aabf", lineHeight: 1.8, wordBreak: "keep-all" }}>
             대학병원 임상교수 출신의 풍부한 경험을 가진 전문의들이 직접 진료합니다
