@@ -1,41 +1,50 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==============================================================
+#  주의 — 이 저장소(hansarang-clinic)는 윈도우 홈 폴더(C:\Users\qkdgh)
+#  전체에 만들어져 있습니다.
+#
+#  그래서 아무 설정이 없으면 `git add -A` 한 번에 홈 폴더의 개인 파일
+#  (.claude.json 의 API 키, 브라우저 프로필, 다른 프로젝트, 윈도우 설정 등)
+#  까지 GitHub에 올라갑니다.
+#
+#  이를 막기 위해 "기본은 전부 제외, 한사랑의원 프로젝트 파일만 허용"
+#  방식으로 적었습니다.
+#
+#  ※ 한사랑의원 프로젝트에 최상위 파일/폴더를 새로 추가하실 때는
+#     아래 허용 목록에 `!/새파일이름` 한 줄을 꼭 같이 넣어 주세요.
+#     (src/ · public/ 안에 넣는 파일은 추가하실 필요 없습니다.)
+# ==============================================================
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# 1) 기본 — 홈 폴더의 모든 것을 제외
+/*
 
-# testing
-/coverage
+# 2) 예외 — 한사랑의원 프로젝트 파일만 허용
+!/.gitignore
+!/AGENTS.md
+!/CLAUDE.md
+!/README.md
+!/eslint.config.mjs
+!/next.config.ts
+!/package.json
+!/package-lock.json
+!/postcss.config.mjs
+!/tsconfig.json
+!/public/
+!/src/
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
+# 3) 허용된 폴더 안에서도 올리면 안 되는 것들
+node_modules/
+.next/
+out/
+build/
+coverage/
+.vercel/
+.env
+.env.*
 *.pem
-
-# debug
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
