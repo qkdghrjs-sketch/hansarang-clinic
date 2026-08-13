@@ -56,8 +56,15 @@
   "최고성능 세척기", "일산 최초의 공단검진 전문기관", "가장 정확히 진단", "완치가 가능", "압도적인 내시경 경험"
 
 ## 프로젝트 규칙
+- 로컬 폴더: `C:\Users\qkdgh\hansarang-clinic`
+  (2026-08-13 이전에는 홈 폴더 `C:\Users\qkdgh` 에 그대로 풀려 있었음.
+   그 탓에 홈 폴더 밑 다른 프로젝트 작업에까지 이 CLAUDE.md 가 딸려가고,
+   `git add -A` 시 개인 파일이 커밋될 위험이 있어 별도 폴더로 옮김.
+   GitHub 저장소 구조와 Vercel 배포 주소는 그대로임.)
 - Next.js + Tailwind, Vercel 배포 (hansarang-clinic-cjsg.vercel.app)
 - **URL은 절대 변경하지 말 것.** 배포는 반드시 `git push origin main`으로만 (기존 Vercel 프로젝트 자동 배포).
   `vercel deploy` CLI는 새 프로젝트/새 URL을 만들 수 있으므로 사용 금지.
-- 로컬 build/dev는 한글 경로 때문에 Turbopack이 크래시함 → `npx next dev --webpack --port 3002` 사용
+- 로컬 build/dev: 예전에는 한글 경로 때문에 Turbopack이 크래시하여
+  `npx next dev --webpack --port 3002` 를 썼음. 폴더를 옮긴 뒤로는 경로에 한글이 없으니
+  `npm run dev` 가 그냥 될 수도 있음 — 먼저 시도해 보고, 안 되면 위 --webpack 명령 사용.
 - 수정 후 모바일 화면 기준 확인 결과를 보고할 것
