@@ -28,10 +28,10 @@ function useReveal() {
 const CARDS = [
   {
     title: "한사랑속편한내과 내시경실은",
-    desc: "유수의 대학병원 소화기분야에서 세부전공을 마친 소화기내시경 전문의들로 구성된 다수의 의료진이 검사를 시행합니다. 연 1만 건 정도의 내시경 검사를 통해 많은 조기 병변을 진단하고 치료함으로써 풍부한 임상실적을 축적하고 있는 고양시 최고의 소화기전문 클리닉입니다.",
+    desc: "유수의 대학병원 소화기분야에서 세부전공을 마친 소화기내시경 전문의들로 구성된 다수의 의료진이 검사를 시행합니다. 연 1만 건 정도의 내시경 검사를 통해 많은 조기 병변을 진단하고 치료함으로써 풍부한 임상실적을 축적하고 있는 소화기 전문 클리닉입니다.",
   },
   {
-    title: "최고의 내시경 장비를 갖추고 있습니다.",
+    title: "내시경 장비를 갖추고 있습니다.",
     desc: "저희 내시경센터에서는 전세계적으로 가장 상위기종인 Olympus 290H 모델을 보유하고 있습니다. 이 모델은 full HD의 화질과 NBI라는 색소내시경이 가능하여 식도, 위, 대장 점막의 미세한 변화를 면밀히 관찰할 수 있어 조기 병변을 진단하는데 있어 최선의 장비라 할 수 있습니다.",
   },
   {
@@ -48,7 +48,7 @@ const STATS = [
   { value: "연 1만건+", label: "내시경 검사" },
   { value: "13대", label: "내시경 보유" },
   { value: "1회", label: "1소독 원칙" },
-  { value: "Olympus 290H", label: "최고 사양 장비" },
+  { value: "Olympus 290H", label: "내시경 장비" },
 ];
 
 const EQUIP_STATS = [
@@ -254,7 +254,7 @@ export default function EndoscopyRoomPage() {
               wordBreak: "keep-all",
             }}
           >
-            대학병원과 동일한 최고 사양 내시경 장비
+            OLYMPUS CV-290 내시경 장비
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -298,7 +298,7 @@ export default function EndoscopyRoomPage() {
                 OLYMPUS CV-290
               </div>
               <div style={{ fontSize: 14, color: "#1a9de0", fontWeight: 600, marginBottom: 24 }}>
-                현존하는 최고 사양의 내시경 시스템
+                Full HD·NBI 지원 내시경 시스템 (OLYMPUS CV-290)
               </div>
               <p
                 style={{

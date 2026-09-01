@@ -63,7 +63,7 @@ export default function HeroSlider() {
         <p className="animate-hero-fade-up-2 text-[14px] md:text-[17px] font-light text-white/75 leading-[1.8] mb-9 tracking-tight">
           2009년 개원 이래 154,000건 이상의 내시경 경험.
           <br />
-          대학병원급 최신 장비와 전문의 직접 진료로 신뢰를 드립니다.
+          최신 장비와 전문의 직접 진료로 신뢰를 드립니다.
         </p>
         <div className="animate-hero-fade-up-3 flex flex-col md:flex-row gap-3 md:gap-[14px]">
           <a

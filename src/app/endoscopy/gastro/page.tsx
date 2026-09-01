@@ -307,7 +307,7 @@ export default function GastroPage() {
               >
                 대학병원과 동일한
                 <br />
-                최고 사양 내시경 장비
+                OLYMPUS CV-290 내시경 장비
               </h3>
               <div
                 style={{
@@ -319,7 +319,7 @@ export default function GastroPage() {
                 OLYMPUS CV-290
               </div>
               <div style={{ fontSize: 14, color: "#1a9de0", fontWeight: 600, marginBottom: 24 }}>
-                현존하는 최고 사양의 내시경 시스템
+                Full HD·NBI 지원 내시경 시스템 (OLYMPUS CV-290)
               </div>
               <p style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9, marginBottom: 24 }}>
                 Full HD 화질과 NBI 색소내시경 기능으로 식도, 위 점막의 미세한 변화까지 면밀히 관찰할 수 있어

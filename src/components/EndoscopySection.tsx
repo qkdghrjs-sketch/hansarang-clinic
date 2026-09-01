@@ -24,8 +24,8 @@ const techCards: TechCard[] = [
     glowColor: "rgba(26,157,224,0.15)",
     highlightBg: "rgba(26,157,224,0.08)",
     title: "OLYMPUS CV-290",
-    subtitle: "최고 사양 내시경 장비",
-    desc: "현존하는 최고 사양의 내시경 장비인 OLYMPUS CV-290으로 보다 선명하고 정확한 내시경 검사를 시행하고 있습니다.",
+    subtitle: "OLYMPUS CV-290 내시경 장비",
+    desc: "Full HD·NBI를 지원하는 OLYMPUS CV-290으로 보다 선명하고 정확한 내시경 검사를 시행하고 있습니다.",
     highlight: "대학병원과 동일한 장비로\n미세한 병변까지 정확하게 확인합니다.",
     checks: [
       "내시경 본체 3대",
@@ -213,7 +213,7 @@ export default function EndoscopySection() {
           >
             대학병원과 동일한
             <br />
-            최고 사양 내시경 시스템
+            Full HD·NBI 지원 내시경 시스템
           </h2>
           <p
             className="text-[16px] font-light leading-[1.85] max-w-[560px]"
@@ -263,7 +263,7 @@ export default function EndoscopySection() {
                     OLYMPUS CV-290
                   </div>
                   <div className="text-[13px] font-light text-white/65">
-                    현존하는 최고 사양의 내시경 시스템
+                    Full HD·NBI 지원 내시경 시스템 (OLYMPUS CV-290)
                   </div>
                 </div>
 
@@ -275,7 +275,7 @@ export default function EndoscopySection() {
                     animation: "endo-float 3s ease-in-out infinite",
                   }}
                 >
-                  대학병원급 장비
+                  최신 장비
                 </div>
               </div>
             </div>
@@ -480,7 +480,7 @@ export default function EndoscopySection() {
               className="text-[18px] md:text-[20px] font-bold text-white tracking-tight leading-[1.4]"
               style={{ fontFamily: "var(--font-noto-serif-kr)" }}
             >
-              2009년 개원 이후 압도적인 내시경 경험
+              2009년 개원 이후 연 1만 건의 내시경 검사 경험
             </div>
           </div>
 

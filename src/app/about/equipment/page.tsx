@@ -25,7 +25,7 @@ function useReveal() {
 const TABS = ["전체", "내시경", "초음파·영상", "검사장비"];
 
 const EQUIPMENT = [
-  { id: 1, category: "내시경", name: "OLYMPUS CV-290", desc: "현존 최고 사양 내시경 시스템 (Full HD + NBI)", image: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png" },
+  { id: 1, category: "내시경", name: "OLYMPUS CV-290", desc: "Full HD·NBI 지원 내시경 시스템", image: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9ca18b461837.png" },
   { id: 2, category: "초음파·영상", name: "LOGIQ P9", desc: "초음파 장비", image: "https://gehealthcare-ultrasound.com/media/ultrasound/Products/LOGIQ/LOGIQ_P9_XDclear/Webseite-Highlight.png" },
   { id: 3, category: "초음파·영상", name: "Javix DR", desc: "Digital Radiography System", image: "https://images.allengers.net/product/2025/09/ceiling-free-digital-radiography-system-17567869521918.jpg" },
   { id: 4, category: "초음파·영상", name: "mammo", desc: "Mammography", image: "https://m.kukinews.com/data/kuk/image/2020/10/23/kuk202010230324.jpg" },
@@ -77,7 +77,7 @@ export default function EquipmentPage() {
               보유장비 안내
             </h2>
             <p style={{ fontSize: 16, color: "#4a7a90", lineHeight: 1.8, wordBreak: "keep-all" }}>
-              한사랑속편한내과는 대학병원급 최신 의료장비를 갖추어
+              한사랑속편한내과는 최신 의료장비를 갖추어
               <br className="hidden sm:block" />
               전문적이고 포괄적인 진료 서비스를 제공합니다
             </p>

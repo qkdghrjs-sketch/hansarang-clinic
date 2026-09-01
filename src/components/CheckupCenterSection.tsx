@@ -10,21 +10,21 @@ const cards = [
     tag: "SPACE",
     tagColor: "#1a9de0",
     title: "편안하고 안락한 공간",
-    desc: "개인 VIP룸을 제공하여 안락한 공간에서 편안한 휴식과 최상의 의료서비스를 제공해드립니다.",
+    desc: "개인 VIP룸을 제공하여 안락한 공간에서 편안한 휴식과 안정적인 의료서비스를 제공해드립니다.",
   },
   {
     img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/16da0e6f5b95b.jpeg",
     tag: "SPECIALIST",
     tagColor: "#0ea5aa",
     title: "특화된 전문의",
-    desc: "7명의 풍부한 경험을 가진 내과전문의들의 노하우로 최상의 검진서비스를 제공해드립니다.",
+    desc: "7명의 풍부한 경험을 가진 내과전문의들의 노하우로 안정적인 검진서비스를 제공해드립니다.",
   },
   {
     img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/d6c55128d7c5d.png",
     tag: "EQUIPMENT",
     tagColor: "#6366f1",
-    title: "대학병원급 최신 장비보유",
-    desc: "대학병원급 내시경장비, 초음파, 임상병리장비를 도입하여 신속하고 정확한 진단이 가능합니다.",
+    title: "최신 장비보유",
+    desc: "내시경장비, 초음파, 임상병리장비를 도입하여 신속하고 정확한 진단이 가능합니다.",
   },
   {
     img: "https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5a0f145b1ac87.png",
@@ -39,7 +39,7 @@ const stats = [
   { value: "당일", label: "결과 확인" },
   { value: "VIP", label: "전용 공간" },
   { value: "7인", label: "전문의 진료" },
-  { value: "최신", label: "대학병원급 장비" },
+  { value: "최신", label: "검사 장비" },
 ];
 
 /* ━━━ Canvas Particles ━━━ */
@@ -198,7 +198,7 @@ export default function CheckupCenterSection() {
               transition: "opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s",
             }}
           >
-            7인의 전문의와 대학병원급 장비로 최상의 검진 서비스를 제공합니다
+            7인의 전문의와 최신 장비로 안정적인 검진 서비스를 제공합니다
           </p>
         </div>
       </div>

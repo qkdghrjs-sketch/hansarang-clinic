@@ -295,7 +295,7 @@ export default function ColonPage() {
             <div style={{ opacity: s4.v ? 1 : 0, transform: s4.v ? "translateX(0)" : "translateX(30px)", transition: "opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s", wordBreak: "keep-all" }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#1a9de0", letterSpacing: 1.5, fontFamily: "var(--font-outfit)", textTransform: "uppercase", marginBottom: 12 }}>EQUIPMENT</div>
               <div style={{ fontFamily: "var(--font-outfit)", fontSize: 28, fontWeight: 800, color: "#0f2a3a", marginBottom: 8 }}>OLYMPUS CV-290</div>
-              <div style={{ fontSize: 14, color: "#1a9de0", fontWeight: 600, marginBottom: 20 }}>현존하는 최고 사양의 내시경 시스템</div>
+              <div style={{ fontSize: 14, color: "#1a9de0", fontWeight: 600, marginBottom: 20 }}>Full HD·NBI 지원 내시경 시스템 (OLYMPUS CV-290)</div>
               <div className="flex flex-col gap-3">
                 {[
                   "고해상도 Full HD 영상으로 미세 병변까지 확인",

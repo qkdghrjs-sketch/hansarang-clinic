@@ -26,18 +26,18 @@ function useReveal() {
 
 /* ━━━ Data ━━━ */
 const STEPS = [
-  <>철저한 소독을 위해서 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>최고성능의 올림푸스 내시경 전용세척기 3대와 감염통 1대를 보유</strong>해 사용하고 있습니다.</>,
+  <>철저한 소독을 위해서 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>올림푸스 내시경 전용세척기 3대와 감염통 1대를 보유</strong>해 사용하고 있습니다.</>,
   <>용종절제와 조직검사 등에 사용하는 내시경 부속장비의 소독을 위해 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>전용 EO가스 소독기를 보유</strong>하고 있습니다.</>,
   <>내시경은 인체로 직접 삽입되므로 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>청결이 매우 중요</strong>합니다. 저희 한사랑속편한내과는 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>최신형 내시경을 보유하고 있으며 한분 한분 마다 새로 소독한 내시경으로 검사</strong>를 하고 있습니다.</>,
-  <>세척 소독제로는 살균효과가 매우 뛰어나며 현재 대학병원 급에서 사용중이며 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>인체에 무해한 내시경 전용 소독제인 페라스텔 과초산 제제를 사용</strong>하고 있습니다.</>,
+  <>세척 소독제로는 살균효과가 매우 뛰어나며 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>인체에 무해한 내시경 전용 소독제인 페라스텔 과초산 제제를 사용</strong>하고 있습니다.</>,
   <>위내시경검사에 필수적인 <strong style={{ color: "#0f2a3a", fontWeight: 700 }}>마우스피스를 일회용으로 사용</strong>하여 환자 여러분에게 내시경 검사로 인한 어떠한 감염도 일어나지 않도록 하고 있습니다.</>,
 ];
 
 const PRINCIPLES = [
   { icon: "🧼", title: "1회 1소독 원칙", desc: "매 검사 후 새로 소독한 내시경 사용" },
-  { icon: "🔬", title: "올림푸스 전용 세척기", desc: "최고성능 내시경 전용 세척기 3대 보유" },
+  { icon: "🔬", title: "올림푸스 전용 세척기", desc: "내시경 전용 세척기 3대 보유" },
   { icon: "💨", title: "EO가스 멸균", desc: "부속기구 전용 EO가스 소독기 보유" },
-  { icon: "🪣", title: "페라스텔 과초산", desc: "대학병원급 인체 무해 전용 소독제 사용" },
+  { icon: "🪣", title: "페라스텔 과초산", desc: "인체 무해 전용 소독제 사용" },
 ];
 
 /* ━━━ Component ━━━ */

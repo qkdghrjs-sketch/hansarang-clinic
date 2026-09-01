@@ -37,7 +37,7 @@ const strengths = [
   },
   {
     icon: "🔬",
-    title: "대학병원급 장비",
+    title: "최신 장비",
     desc: "최신 의료장비를 지속적으로 도입하여 정확하고 편안한 진료를 제공합니다.",
   },
   {
@@ -239,7 +239,7 @@ export default function GreetingPage() {
               >
                 동네병원에서 받는
                 <br />
-                대학병원급 진료
+                내과 전문의 진료
               </h3>
 
               {/* Block 1 */}
@@ -272,7 +272,7 @@ export default function GreetingPage() {
                 </div>
                 <p className="font-light" style={{ fontSize: 15, color: "#4a7a90", lineHeight: 1.9 }}>
                   최신의 의료장비를 업데이트하는 데 투자를 아끼지 않음으로써,
-                  편안한 동네병원에서 대학병원급의 진료를 받으실 수 있도록 끊임없이 노력하고 있습니다.
+                  편안한 동네병원에서 정확한 진료를 받으실 수 있도록 끊임없이 노력하고 있습니다.
                 </p>
               </div>
 
